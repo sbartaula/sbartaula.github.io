@@ -39,8 +39,19 @@ title: "My Blog Title"
 date: 2026-06-18
 tags: [AI, Computer Vision]
 excerpt: "Short summary here."
+hero_image: /assets/images/my-post-image.jpg
+hero_image_alt: "Short alt text"
+hero_image_caption: "Optional caption."
 ---
 ```
+
+You can also use normal Markdown images inside posts:
+
+```md
+![Alt text](/assets/images/example.jpg)
+```
+
+Put images in `assets/images/` so they stay easy to organize later.
 
 ## Deploy with GitHub Pages
 
@@ -59,6 +70,12 @@ The CV page lives in `cv.md`. Update the summary, skills, experience, education,
 ## Edit projects
 
 The project portfolio lives in `projects.md`. Each project is a simple HTML section, so you can add, remove, or reorder projects without touching any other part of the site.
+
+## RSS and subscriptions
+
+The site already publishes an RSS feed at `/feed.xml`. That is the simplest subscription option and works well for readers who want a low-friction way to follow new posts.
+
+If you want email subscriptions later, a common next step is to add a service like Buttondown, Mailchimp, or ConvertKit, then link it from the writing page and footer.
 
 ## Site structure
 

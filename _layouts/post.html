@@ -9,9 +9,24 @@ layout: default
     {% if page.excerpt %}
       <p class="lede">{{ page.excerpt | strip_html }}</p>
     {% endif %}
+    {% if page.hero_image %}
+      <figure class="post-hero">
+        <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_image_alt | default: page.title | escape }}">
+        {% if page.hero_image_caption %}
+          <figcaption>{{ page.hero_image_caption }}</figcaption>
+        {% endif %}
+      </figure>
+    {% endif %}
   </header>
 
   <div class="post-content">
     {{ content }}
   </div>
+
+  <aside class="post-note">
+    <p>
+      Want updates? Subscribe to the <a href="{{ '/feed.xml' | relative_url }}">RSS feed</a>.
+      I may add an email newsletter later, but RSS is the simplest way to follow new posts now.
+    </p>
+  </aside>
 </article>

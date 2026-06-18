@@ -193,6 +193,40 @@ a:hover {
   margin-top: 1.4rem;
 }
 
+.post-hero {
+  margin: 1rem 0 0;
+}
+
+.post-hero img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--soft);
+}
+
+.post-hero figcaption,
+.post-note,
+.writing-callout {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.post-note {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.writing-callout {
+  margin-bottom: 1.5rem;
+}
+
+.writing-callout code {
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, monospace;
+  font-size: 0.95em;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: 1fr;
