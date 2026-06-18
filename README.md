@@ -50,6 +50,8 @@ excerpt: "Short summary here."
 4. Set the source to the `main` branch and the root folder.
 5. Wait for the build to finish, then open `https://sbartaula.github.io`.
 
+If the repository is named something else, GitHub Pages publishes it at a project URL like `https://sbartaula.github.io/<repo>/`. To use the root URL `https://sbartaula.github.io/`, the repository itself must be `sbartaula.github.io`.
+
 ## Edit the CV
 
 The CV page lives in `cv.md`. Update the summary, skills, experience, education, and links there directly.
