@@ -1,0 +1,21 @@
+title: "Saroj Bartaula — Engineering Lab"
+description: "Engineering notes, projects, and CV for AI/ML, computer vision, backend systems, and real-time AI."
+url: "https://sbartaula.github.io"
+baseurl: ""
+lang: en
+
+markdown: kramdown
+permalink: /writing/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: Saroj Bartaula
+
+social:
+  github: "https://github.com/sbartaula"
+  linkedin: "https://www.linkedin.com/in/your-linkedin-handle/"
+  email: "mailto:sarojbartaula152@gmail.com"
