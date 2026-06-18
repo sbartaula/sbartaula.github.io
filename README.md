@@ -50,7 +50,7 @@ excerpt: "Short summary here."
 4. Set the source to the `main` branch and the root folder.
 5. Wait for the build to finish, then open `https://sbartaula.github.io`.
 
-If the repository is named something else, GitHub Pages publishes it at a project URL like `https://sbartaula.github.io/<repo>/`. To use the root URL `https://sbartaula.github.io/`, the repository itself must be `sbartaula.github.io`.
+To use the root URL `https://sbartaula.github.io/`, the repository itself must be renamed to `sbartaula.github.io`. After that rename, GitHub Pages will publish it like a user site at the root.
 
 ## Edit the CV
 
