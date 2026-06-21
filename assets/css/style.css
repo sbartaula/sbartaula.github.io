@@ -106,6 +106,13 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 
+.intro-grid,
+.cv-grid,
+.cv-header {
+  display: grid;
+  gap: 1rem;
+}
+
 .panel {
   border: 1px solid var(--line);
   background: linear-gradient(180deg, #fff, #fcfcfb);
@@ -181,6 +188,37 @@ a:hover {
 .prose p,
 .prose li {
   max-width: 72ch;
+}
+
+.intro-grid h2,
+.cv-card h3,
+.cv-header h2,
+.mini-card .meta,
+.section-link {
+  margin-top: 0;
+}
+
+.mini-card {
+  border-top: 1px solid var(--line);
+  padding-top: 0.75rem;
+}
+
+.mini-card:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.home-project-grid {
+  grid-template-columns: 1fr;
+}
+
+.section-link {
+  margin-bottom: 0;
+}
+
+.cv-header p,
+.cv-contact p {
+  margin: 0.2rem 0;
 }
 
 .post-content > :first-child {
@@ -265,6 +303,16 @@ a:hover {
 @media (min-width: 760px) {
   .project-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .intro-grid,
+  .cv-grid,
+  .cv-header {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-project-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
