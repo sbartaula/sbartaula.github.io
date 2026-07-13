@@ -1,13 +1,15 @@
 :root {
-  --bg: #ffffff;
-  --text: #161616;
-  --muted: #5f646d;
-  --line: #e6e6e1;
-  --soft: #f7f7f4;
-  --accent: #0f4c81;
-  --max: 860px;
-  --serif: Georgia, "Times New Roman", Times, serif;
-  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --bg: #f6f0e8;
+  --text: #1f1b18;
+  --muted: #6c625a;
+  --line: #d9cdc2;
+  --soft: #fbf7f1;
+  --accent: #9a3412;
+  --accent-soft: #f1dfd4;
+  --panel-shadow: 0 18px 40px rgba(60, 33, 16, 0.06);
+  --max: 960px;
+  --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --sans: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 * {
@@ -15,7 +17,9 @@
 }
 
 html {
-  background: var(--bg);
+  background:
+    radial-gradient(circle at top left, rgba(154, 52, 18, 0.08), transparent 30%),
+    linear-gradient(180deg, #f8f3ec 0%, var(--bg) 22%, #f3ede5 100%);
   color: var(--text);
 }
 
@@ -25,6 +29,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  background: transparent;
 }
 
 a {
@@ -49,11 +54,11 @@ a:hover {
   gap: 1rem;
   align-items: center;
   padding: 1.25rem 0;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid rgba(108, 98, 90, 0.2);
 }
 
 .site-footer {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(108, 98, 90, 0.2);
   border-bottom: 0;
   margin-top: 3rem;
   padding-bottom: 2rem;
@@ -98,26 +103,30 @@ a:hover {
 }
 
 .site-main {
-  padding: 2rem 0 1rem;
+  padding: 2.4rem 0 1rem;
 }
 
 .hero,
 .panel {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
 .intro-grid,
 .cv-grid,
-.cv-header {
+.cv-header,
+.hero-grid,
+.split-columns,
+.favorites-grid {
   display: grid;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .panel {
   border: 1px solid var(--line);
-  background: linear-gradient(180deg, #fff, #fcfcfb);
-  border-radius: 14px;
-  padding: 1.25rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(251, 247, 241, 0.96));
+  border-radius: 22px;
+  padding: 1.4rem;
+  box-shadow: var(--panel-shadow);
 }
 
 .page-header h1,
@@ -136,13 +145,16 @@ a:hover {
 
 .hero h1 {
   margin: 0 0 0.75rem;
-  font-size: clamp(2.3rem, 5vw, 4rem);
+  font-size: clamp(2.6rem, 5.8vw, 4.5rem);
+  max-width: 11ch;
 }
 
 .eyebrow,
 .meta {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   margin: 0 0 0.4rem;
 }
 
@@ -151,9 +163,17 @@ a:hover {
   max-width: 68ch;
 }
 
+.hero .lede {
+  color: rgba(31, 27, 24, 0.92);
+}
+
 .clean-list {
   margin: 0.5rem 0 0;
   padding-left: 1.2rem;
+}
+
+.compact-list li + li {
+  margin-top: 0.35rem;
 }
 
 .post-list {
@@ -198,6 +218,31 @@ a:hover {
   margin-top: 0;
 }
 
+.section-heading {
+  margin-bottom: 1rem;
+}
+
+.section-heading h2,
+.hero-note h2 {
+  margin: 0;
+  font-family: var(--serif);
+  line-height: 1.15;
+}
+
+.proof-panel {
+  background:
+    linear-gradient(180deg, rgba(154, 52, 18, 0.06), rgba(255, 255, 255, 0.9)),
+    rgba(255, 255, 255, 0.84);
+}
+
+.project-card h3 {
+  margin-bottom: 0.3rem;
+}
+
+.signal-list {
+  margin-top: 0.35rem;
+}
+
 .mini-card {
   border-top: 1px solid var(--line);
   padding-top: 0.75rem;
@@ -213,6 +258,50 @@ a:hover {
 }
 
 .section-link {
+  margin-bottom: 0;
+}
+
+.hero {
+  padding: 0.6rem 0 0.2rem;
+}
+
+.hero-grid {
+  align-items: start;
+}
+
+.hero-note {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-note::after {
+  content: "";
+  position: absolute;
+  inset: auto -2.2rem -2.2rem auto;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(154, 52, 18, 0.16), transparent 70%);
+}
+
+.hero-note p,
+.supporting-copy,
+.favorite-note {
+  color: rgba(31, 27, 24, 0.82);
+}
+
+.stack-panel {
+  padding-top: 1.5rem;
+}
+
+.favorite-card {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 252, 247, 0.76);
+}
+
+.favorite-note {
   margin-bottom: 0;
 }
 
@@ -289,6 +378,7 @@ a:hover {
   color: white;
   border-radius: 999px;
   text-decoration: none;
+  box-shadow: 0 8px 20px rgba(31, 27, 24, 0.12);
 }
 
 .button:hover {
@@ -301,13 +391,19 @@ a:hover {
 }
 
 @media (min-width: 760px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.9fr);
+  }
+
   .project-grid {
     grid-template-columns: 1fr 1fr;
   }
 
   .intro-grid,
   .cv-grid,
-  .cv-header {
+  .cv-header,
+  .split-columns,
+  .favorites-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -321,5 +417,9 @@ a:hover {
   .site-footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .hero h1 {
+    max-width: none;
   }
 }
