@@ -145,17 +145,21 @@ a:hover {
 
 .hero h1 {
   margin: 0 0 0.75rem;
-  font-size: clamp(2.6rem, 5.8vw, 4.5rem);
-  max-width: 11ch;
+  font-size: clamp(2.1rem, 4.4vw, 3.5rem);
+  line-height: 1.06;
+  max-width: 15ch;
 }
 
-.eyebrow,
 .meta {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.92rem;
+  margin: 0 0 0.4rem;
+}
+
+.eyebrow {
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin: 0 0 0.4rem;
+  font-size: 0.84rem;
 }
 
 .lede {
@@ -165,6 +169,10 @@ a:hover {
 
 .hero .lede {
   color: rgba(31, 27, 24, 0.92);
+}
+
+.quick-links {
+  margin-top: 1.05rem;
 }
 
 .clean-list {
@@ -392,7 +400,8 @@ a:hover {
 
 @media (min-width: 760px) {
   .hero-grid {
-    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.9fr);
+    grid-template-columns: minmax(0, 1.75fr) minmax(280px, 0.85fr);
+    gap: 1.6rem;
   }
 
   .project-grid {
@@ -421,5 +430,6 @@ a:hover {
 
   .hero h1 {
     max-width: none;
+    font-size: clamp(1.95rem, 9vw, 2.6rem);
   }
 }

@@ -7,7 +7,7 @@ title: Home
   <div class="hero-grid">
     <div>
       <p class="eyebrow">Engineering notebook · AI systems · motion intelligence</p>
-      <h1>Hi, I’m Saroj Bartaula. I build AI products that have to work outside the demo.</h1>
+      <h1>Hi, I’m Saroj Bartaula. I build AI products that work outside the demo.</h1>
       <p class="lede">
         I’m an AI/ML engineer and product builder based in Spain, working across computer vision,
         backend systems, and real-time AI. I care about useful software, clean execution, and
