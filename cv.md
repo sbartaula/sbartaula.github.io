@@ -6,13 +6,13 @@ permalink: /cv/
 
 <section class="page-header">
   <h1>CV</h1>
-  <p>Concise professional summary for product, AI, and engineering roles.</p>
+  <p>Neutral, ATS-friendly summary for applied AI, computer vision, and product engineering roles.</p>
 </section>
 
 <section class="panel cv-header">
   <div>
     <h2>Saroj Bartaula</h2>
-    <p>AI/ML Engineer · Backend Developer · Founder</p>
+    <p>Applied AI Engineer · Computer Vision Builder · Founder</p>
   </div>
   <div class="cv-contact">
     <p><a href="mailto:sarojbartaula152@gmail.com">sarojbartaula152@gmail.com</a></p>
@@ -25,10 +25,18 @@ permalink: /cv/
   <article class="panel cv-card">
     <h3>Summary</h3>
     <p>
-      AI/ML engineer and product builder focused on computer vision, backend systems, real-time AI, and applied product development.
-      Founder of Tenslam Vision, building motion intelligence systems that turn video into structured human movement data for fitness,
-      sports, and digital twins.
+      Applied AI engineer and founder focused on turning computer vision and backend systems into useful product behavior.
+      Building Tenslam Vision: motion intelligence infrastructure that turns video into structured human movement data for
+      fitness, sports, and physical AI workflows.
     </p>
+
+    <h3>Target roles</h3>
+    <ul class="clean-list">
+      <li>Founding AI Engineer</li>
+      <li>Computer Vision Engineer (Applied / Real-time)</li>
+      <li>AI Product Engineer (Model to Production)</li>
+      <li>AI Backend Engineer (Inference and orchestration)</li>
+    </ul>
 
     <h3>Core strengths</h3>
     <ul class="clean-list">
@@ -44,29 +52,29 @@ permalink: /cv/
     <p>Python, Django, FastAPI, REST APIs, PyTorch, TensorFlow, OpenCV, MediaPipe, scikit-learn, Pandas, React, Next.js, Android, Firebase, PostgreSQL, Docker, AWS, Azure, GitHub Actions, Linux</p>
 
     <h3>Experience</h3>
-    <p><strong>Founder / Lead Architect — Tenslam Vision</strong></p>
+    <p><strong>Founder / Lead Architect — Tenslam Vision</strong> · Ongoing</p>
     <ul class="clean-list">
-      <li>Building motion intelligence systems for fitness, sports, and digital twins.</li>
-      <li>Developed AI-powered fitness and computer vision prototypes.</li>
-      <li>Working on video-to-skeleton data pipelines and real-time feedback systems.</li>
+      <li>Built motion-intelligence prototypes for fitness and sports using video-to-skeleton pipelines.</li>
+      <li>Designed real-time feedback loops for posture and movement quality in mobile and CV workflows.</li>
+      <li>Scoped product direction, technical architecture, and iteration loops from prototype to reusable components.</li>
     </ul>
 
-    <p><strong>AI/ML Engineer / Product Builder</strong></p>
+    <p><strong>AI/ML Engineer / Product Builder</strong> · Ongoing</p>
     <ul class="clean-list">
-      <li>Built computer vision, backend, and AI product prototypes.</li>
-      <li>Worked with Python, machine learning, REST APIs, and cloud deployment.</li>
-      <li>Developed MVPs across fitness, healthcare, fintech, and AI tools.</li>
+      <li>Built AI and backend prototypes across CV, API infrastructure, and product surfaces.</li>
+      <li>Delivered MVP systems with Python, ML tooling, REST APIs, and cloud deployment paths.</li>
+      <li>Worked across fitness, healthcare, fintech, and AI tooling use cases with a ship-and-iterate bias.</li>
     </ul>
   </article>
 
   <article class="panel cv-card">
     <h3>Selected projects</h3>
     <ul class="clean-list">
-      <li>Tenslam Gym</li>
-      <li>Tenslam Vision Motion Engine</li>
-      <li>Local LLM Learning Lab</li>
-      <li>Django + Next.js Product Systems</li>
-      <li>AI Research Platform Experiments</li>
+      <li>Tenslam Gym — real-time AI trainer with pose tracking and feedback loops</li>
+      <li>Tenslam Vision Motion Engine — structured movement extraction from video</li>
+      <li>Local LLM Learning Lab — local inference and quantization tradeoff experiments</li>
+      <li>Django + Next.js Product Systems — end-to-end API + frontend MVP execution</li>
+      <li>AI Research Platform Experiments — orchestration, observability, and reliability</li>
     </ul>
 
     <h3>Education</h3>
@@ -86,6 +94,6 @@ permalink: /cv/
 
 <section class="panel cv-actions">
   <p>
-    A PDF version can be added later. For now, this page is the clean web CV and the easiest public reference.
+    ATS note: use browser Print to PDF for recruiter submission. This page is structured for both web readability and text extraction.
   </p>
 </section>

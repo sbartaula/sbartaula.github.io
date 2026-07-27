@@ -3,8 +3,46 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% assign page_title = page.title | default: site.title %}
+    {% assign page_description = page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 | xml_escape %}
+    {% assign page_url = page.url | replace:'index.html','' | absolute_url %}
+    {% assign page_og_image = page.og_image | default: site.default_og_image | absolute_url %}
     <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | xml_escape }}">
+    <meta name="description" content="{{ page_description }}">
+    <link rel="canonical" href="{{ page_url }}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page_title | escape }}">
+    <meta property="og:description" content="{{ page_description }}">
+    <meta property="og:url" content="{{ page_url }}">
+    <meta property="og:site_name" content="{{ site.title | escape }}">
+    <meta property="og:image" content="{{ page_og_image }}">
+    <meta property="og:image:alt" content="{{ page_title | escape }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page_title | escape }}">
+    <meta name="twitter:description" content="{{ page_description }}">
+    <meta name="twitter:image" content="{{ page_og_image }}">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "{{ site.author | default: 'Saroj Bartaula' | escape }}",
+        "url": "{{ site.url }}",
+        "sameAs": [
+          "{{ site.social.github }}"
+        ],
+        "jobTitle": "AI/ML Engineer and Product Builder",
+        "knowsAbout": [
+          "Computer Vision",
+          "Motion Intelligence",
+          "AI Systems",
+          "Backend Engineering",
+          "Real-time Inference"
+        ]
+      }
+    </script>
+
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
   </head>

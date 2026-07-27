@@ -6,80 +6,113 @@ title: Home
 <section class="hero">
   <div class="hero-grid">
     <div>
-      <p class="eyebrow">Engineering notebook · AI systems · motion intelligence</p>
-      <h1>Hi, I’m Saroj Bartaula. I build AI products that work outside the demo.</h1>
+      <p class="eyebrow">Saroj Bartaula · Motion Intelligence Engineering</p>
+      <h1>I am Saroj Bartaula. I build motion-intelligence systems that survive real-world constraints.</h1>
       <p class="lede">
-        I’m an AI/ML engineer and product builder based in Spain, working across computer vision,
-        backend systems, and real-time AI. I care about useful software, clean execution, and
-        turning rough ideas into something people can actually use.
+        I am an AI/ML engineer and founder based in Spain. My work sits between computer vision,
+        backend systems, and product execution, with one standard: the system must be usable,
+        measurable, and reliable outside a controlled demo.
       </p>
       <p class="lede">
-        Right now I’m building Tenslam Vision: motion intelligence that turns video into structured
-        human movement data for fitness, sports, and future physical AI systems.
+        Right now I am building Tenslam Vision: infrastructure that turns video into structured
+        human movement signals for fitness, sports, and future physical AI workflows.
       </p>
 
       <div class="quick-links" aria-label="Primary links">
         <a class="button" href="{{ '/projects/' | relative_url }}">View projects</a>
+        <a href="{{ '/case-studies/' | relative_url }}">Case studies</a>
         <a href="{{ '/writing/' | relative_url }}">Writing</a>
         <a href="{{ '/cv/' | relative_url }}">CV</a>
+        <a href="{{ '/resume-ats/' | relative_url }}">Resume ATS</a>
         <a href="{{ site.social.github }}">GitHub</a>
-        <a href="{{ site.social.linkedin }}">LinkedIn</a>
         <a href="{{ site.social.email }}">Email</a>
       </div>
     </div>
 
     <aside class="hero-note panel" aria-label="Current focus">
       <p class="meta">Current focus</p>
-      <h2>Building motion intelligence from real video.</h2>
+      <h2>Video to structured motion data.</h2>
       <p>
-        The thread behind most of my work is simple: take messy physical-world signals and turn
-        them into reliable software behavior.
+        I treat motion intelligence as an engineering problem, not only a model problem.
+        The core work is signal quality, feedback timing, and system reliability.
       </p>
+      <div class="signal-chips" aria-label="System signal priorities">
+        <span>Latency</span>
+        <span>Stability</span>
+        <span>Feedback quality</span>
+      </div>
       <ul class="clean-list compact-list">
         <li>Pose pipelines and movement analysis</li>
         <li>Real-time systems with practical feedback loops</li>
         <li>Fast prototypes that can survive contact with users</li>
       </ul>
+      <div class="hero-status" aria-label="Current stage summary">
+        <p><strong>Build stage:</strong> active prototype hardening</p>
+        <p><strong>Primary domain:</strong> fitness and sports motion workflows</p>
+      </div>
     </aside>
   </div>
 </section>
 
 <section class="panel intro-grid">
   <div>
-    <h2>What this site is for</h2>
+    <h2>What this site does</h2>
     <p>
-      This site has three jobs: show what I can build, document how I think, and publish technical writing around AI,
-      engineering, and the edge where software meets the physical world.
+      This is my public engineering log. It is designed for fast due diligence: what I build,
+      how I reason, and what technical standards I follow while iterating.
     </p>
   </div>
   <div>
-    <h2>What visitors should find here</h2>
+    <h2>What you can evaluate quickly</h2>
     <ul class="clean-list">
-      <li>Projects with clear technical decisions and real use cases</li>
-      <li>Writing about AI systems, computer vision, tooling, and science-adjacent ideas</li>
-      <li>A public record of experiments, prototypes, and product thinking</li>
-      <li>A fast way to see whether my work fits your team or collaboration</li>
+      <li>Project scope, constraints, architecture choices, and current stage</li>
+      <li>Evidence-oriented writing with benchmark frames and failure notes</li>
+      <li>Execution style across model, backend, and product layers</li>
+      <li>Role fit for teams or strategic fit for collaboration</li>
     </ul>
   </div>
 </section>
 
 <section class="panel proof-panel">
   <div class="section-heading">
-    <p class="eyebrow">For Hiring</p>
-    <h2>If you are evaluating me for a technical role</h2>
+    <p class="eyebrow">Collaboration</p>
+    <h2>Open to selective roles and strategic partnerships</h2>
   </div>
   <div class="split-columns">
     <div>
       <p class="supporting-copy">
-        The strongest signal on this site is not a tagline. It is the combination of shipped prototypes,
-        technical writing, and a visible pattern of building across AI, backend systems, and product execution.
+        I am building Tenslam Vision while remaining open to high-leverage technical roles,
+        pilot collaborations, and long-term partnerships where applied AI must ship fast and hold quality.
       </p>
     </div>
     <div>
       <ul class="clean-list compact-list">
-        <li>Start with Projects if you want to see applied work</li>
-        <li>Read Writing if you want to understand how I reason</li>
-        <li>Open the CV if you want the compressed version</li>
+        <li>For investors: start with Case Studies and the motion intelligence thesis</li>
+        <li>For teams: start with Projects and Resume ATS for implementation depth</li>
+        <li>For both: Writing shows decision quality under practical constraints</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="section-heading">
+    <p class="eyebrow">Snapshot</p>
+    <h2>Tenslam Vision at a glance</h2>
+  </div>
+  <div class="split-columns">
+    <div>
+      <ul class="clean-list compact-list">
+        <li><strong>Problem:</strong> movement quality is hard to measure from raw video in product workflows</li>
+        <li><strong>Approach:</strong> convert video into structured motion signals usable by apps and systems</li>
+        <li><strong>Near-term wedge:</strong> fitness and sports feedback loops with real-time constraints</li>
+      </ul>
+    </div>
+    <div>
+      <ul class="clean-list compact-list">
+        <li><strong>Why now:</strong> edge inference + better CV tooling + demand for practical physical AI interfaces</li>
+        <li><strong>Build mode:</strong> prototype fast, measure failure modes, harden into reusable components</li>
+        <li><strong>Current ask:</strong> selective collaboration, pilot conversations, and technical leadership roles</li>
       </ul>
     </div>
   </div>
@@ -88,7 +121,7 @@ title: Home
 <section class="panel stack-panel">
   <div class="section-heading">
     <p class="eyebrow">Now</p>
-    <h2>What I am spending time on</h2>
+    <h2>Current build priorities</h2>
   </div>
   <div class="split-columns">
     <div>
@@ -100,8 +133,8 @@ title: Home
     </div>
     <div>
       <p class="supporting-copy">
-        I am most interested in the layer between models and products: the infrastructure, the
-        iteration loops, and the design choices that make an AI system genuinely useful.
+        My focus is the layer between model output and user value: representation quality,
+        reliability loops, and product behavior under non-ideal inputs.
       </p>
     </div>
   </div>
@@ -133,32 +166,28 @@ title: Home
 
 <section class="panel">
   <div class="section-heading">
-    <p class="eyebrow">Favorites</p>
-    <h2>Things I keep coming back to</h2>
+    <p class="eyebrow">Working style</p>
+    <h2>How I build</h2>
   </div>
   <div class="favorites-grid">
     <article class="favorite-card">
-      <p class="meta">Podcasts and channels</p>
+      <p class="meta">Engineering principles</p>
       <ul class="clean-list compact-list">
-        <li>All-In Podcast for product, markets, and operator energy</li>
-        <li>Dwarkesh for long-form conversations with technical depth</li>
-        <li>Founders for company-building stories and obsession</li>
-        <li>Lex Fridman when I want patient, wide-ranging interviews</li>
-        <li>Aperture for thoughtful visual essays and internet culture</li>
-        <li>Joe Rogan occasionally, mostly when the guest is unusually strong</li>
+        <li>Start with a narrow loop that can be measured</li>
+        <li>Instrument failure cases before polishing the UI</li>
+        <li>Ship in short cycles, then harden the data path</li>
+        <li>Optimize for repeatability, not one perfect demo</li>
       </ul>
     </article>
     <article class="favorite-card">
-      <p class="meta">Books I liked</p>
+      <p class="meta">What matters in review</p>
       <ul class="clean-list compact-list">
-        <li>The Almanack of Naval Ravikant</li>
-        <li>Zero to One</li>
-        <li>Shoe Dog</li>
-        <li>Atomic Habits</li>
-        <li>The Hard Thing About Hard Things</li>
-        <li>Deep Work</li>
+        <li>Can the system handle noise and edge conditions?</li>
+        <li>Are tradeoffs explicit and testable?</li>
+        <li>Does output map to a real user decision?</li>
+        <li>Can the architecture scale without a rewrite?</li>
       </ul>
-      <p class="favorite-note">This list is intentionally lightweight for now and easy to swap out later.</p>
+      <p class="favorite-note">This is the review frame I use for my own work before publishing it.</p>
     </article>
   </div>
 </section>

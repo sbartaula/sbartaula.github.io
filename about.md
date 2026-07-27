@@ -10,16 +10,16 @@ permalink: /about/
 
 <section class="panel prose">
   <p>
-    I’m Saroj Bartaula, based in Spain. My work sits across software, startups, AI, computer vision,
-    and product building. I like building practical systems, learning in public, and writing about what holds up in reality.
+    My full name is Saroj Bartaula. I am based in Spain and I build at the intersection of AI,
+    computer vision, backend systems, and product execution.
   </p>
   <p>
-    I’m especially interested in AI systems that connect the digital and physical world: computer vision, human
-    motion, digital twins, robotics, fitness technology, and simulation.
+    I am especially interested in systems that connect the digital and physical world: human motion,
+    real-time feedback, digital twins, robotics interfaces, and practical physical AI.
   </p>
   <p>
-    The goal of this site is simple: make my work legible. Projects show what I build, writing shows how I think,
-    and the overall site should make it easy to understand what kind of technical problems I want to work on.
+    This site exists to make my work auditable. Projects show implementation choices, writing shows reasoning,
+    and case studies show where systems fail and how they improve over time.
   </p>
 </section>
 

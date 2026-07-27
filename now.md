@@ -18,4 +18,5 @@ permalink: /now/
     <li>Learning local LLMs and AI agent systems</li>
     <li>Writing technical notes from real experiments</li>
   </ul>
+  <p class="meta">Last updated: July 2026</p>
 </section>
