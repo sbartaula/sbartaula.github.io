@@ -10,7 +10,7 @@ permalink: /resume-ats/
 </section>
 
 <section class="panel prose">
-  <h2>Saroj Bartaula</h2>
+  <h2>Saroj</h2>
   <p>Spain · <a href="mailto:sarojbartaula152@gmail.com">sarojbartaula152@gmail.com</a> · <a href="https://github.com/sbartaula">GitHub</a> · <a href="https://sbartaula.github.io">Website</a></p>
 
   <h3>Target Roles</h3>
@@ -46,6 +46,7 @@ permalink: /resume-ats/
 
   <h3>Selected Projects</h3>
   <ul class="clean-list">
+    <li>AI Workflow Agent: built a Slack-first AI assistant using GPT-4o (OpenRouter), FastAPI, and GitHub APIs to automate PR intake, CI monitoring, and idea capture; deployed on Render with HMAC-secured endpoints.</li>
     <li>Tenslam Gym: real-time AI trainer with pose estimation, feedback, and repetition tracking.</li>
     <li>Tenslam Vision Motion Engine: video-to-skeleton and structured movement feature extraction pipeline.</li>
     <li>Local LLM Learning Lab: local inference and quantization experiments under hardware constraints.</li>

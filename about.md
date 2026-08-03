@@ -10,7 +10,7 @@ permalink: /about/
 
 <section class="panel prose">
   <p>
-    My full name is Saroj Bartaula. I am based in Spain and I build at the intersection of AI,
+    I am Saroj, based in Spain, and I build at the intersection of AI,
     computer vision, backend systems, and product execution.
   </p>
   <p>

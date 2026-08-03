@@ -11,7 +11,7 @@ permalink: /cv/
 
 <section class="panel cv-header">
   <div>
-    <h2>Saroj Bartaula</h2>
+    <h2>Saroj</h2>
     <p>Applied AI Engineer · Computer Vision Builder · Founder</p>
   </div>
   <div class="cv-contact">
@@ -70,6 +70,7 @@ permalink: /cv/
   <article class="panel cv-card">
     <h3>Selected projects</h3>
     <ul class="clean-list">
+      <li>AI Workflow Agent — built a Slack-first AI assistant integrating GPT-4o (OpenRouter), GitHub APIs, and FastAPI to automate PR intake, CI monitoring, and team idea capture; deployed on Render with HMAC-secured endpoints.</li>
       <li>Tenslam Gym — real-time AI trainer with pose tracking and feedback loops</li>
       <li>Tenslam Vision Motion Engine — structured movement extraction from video</li>
       <li>Local LLM Learning Lab — local inference and quantization tradeoff experiments</li>

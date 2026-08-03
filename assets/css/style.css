@@ -20,6 +20,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   background:
     linear-gradient(135deg, rgba(15, 118, 110, 0.08), rgba(239, 249, 246, 0.28) 36%, rgba(14, 46, 42, 0.08) 100%),
     repeating-linear-gradient(90deg, rgba(20, 33, 29, 0.03), rgba(20, 33, 29, 0.03) 1px, transparent 1px, transparent 28px),
@@ -455,6 +456,16 @@ a:hover {
   color: var(--muted);
 }
 
+.project-nav {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.project-nav a {
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
 .button,
 .text-link {
   display: inline-block;
@@ -524,7 +535,7 @@ tbody tr:nth-child(even) {
   }
 
   .home-project-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

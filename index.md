@@ -6,8 +6,8 @@ title: Home
 <section class="hero">
   <div class="hero-grid">
     <div>
-      <p class="eyebrow">Saroj Bartaula · Motion Intelligence Engineering</p>
-      <h1>I am Saroj Bartaula. I build motion-intelligence systems that survive real-world constraints.</h1>
+      <p class="eyebrow">Saroj · Motion Intelligence Engineering</p>
+      <h1>I am Saroj. I build motion-intelligence systems that survive real-world constraints.</h1>
       <p class="lede">
         I am an AI/ML engineer and founder based in Spain. My work sits between computer vision,
         backend systems, and product execution, with one standard: the system must be usable,
@@ -20,10 +20,8 @@ title: Home
 
       <div class="quick-links" aria-label="Primary links">
         <a class="button" href="{{ '/projects/' | relative_url }}">View projects</a>
-        <a href="{{ '/case-studies/' | relative_url }}">Case studies</a>
         <a href="{{ '/writing/' | relative_url }}">Writing</a>
-        <a href="{{ '/cv/' | relative_url }}">CV</a>
-        <a href="{{ '/resume-ats/' | relative_url }}">Resume ATS</a>
+        <a href="{{ '/about/' | relative_url }}">About</a>
         <a href="{{ site.social.github }}">GitHub</a>
         <a href="{{ site.social.email }}">Email</a>
       </div>
@@ -87,8 +85,8 @@ title: Home
     </div>
     <div>
       <ul class="clean-list compact-list">
-        <li>For investors: start with Case Studies and the motion intelligence thesis</li>
-        <li>For teams: start with Projects and Resume ATS for implementation depth</li>
+        <li>For investors: start with Projects and Writing to evaluate direction and execution quality</li>
+        <li>For teams: start with Projects and Writing for implementation depth and decision quality</li>
         <li>For both: Writing shows decision quality under practical constraints</li>
       </ul>
     </div>
@@ -146,6 +144,11 @@ title: Home
     <h2>Selected work</h2>
   </div>
   <div class="project-grid home-project-grid">
+    <article class="mini-card">
+      <p class="meta">AI Agent Chat</p>
+      <p>Slack-first engineering assistant for PR intake, CI monitoring, merge gating, and GPT-4o powered check summaries.</p>
+      <a class="text-link" href="{{ '/projects/#ai-agent-chat' | relative_url }}">See project</a>
+    </article>
     <article class="mini-card">
       <p class="meta">Tenslam Gym</p>
       <p>Android-based AI trainer with pose estimation, posture feedback, and rep counting for everyday workouts.</p>

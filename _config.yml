@@ -1,9 +1,9 @@
-title: "Saroj Bartaula — Motion Systems Lab"
-description: "Engineering notes, projects, and CV for AI/ML, computer vision, backend systems, and real-time AI."
+title: "Saroj — Motion Systems Lab"
+description: "Engineering notes, projects, and experiments across AI, computer vision, backend systems, and real-time AI."
 url: "https://sbartaula.github.io"
 baseurl: ""
 lang: en
-author: "Saroj Bartaula"
+author: "Saroj"
 default_og_image: "/assets/img/og-motion-systems.svg"
 
 markdown: kramdown
@@ -15,7 +15,7 @@ defaults:
       type: "posts"
     values:
       layout: post
-      author: Saroj Bartaula
+      author: Saroj
 
 social:
   github: "https://github.com/sbartaula"

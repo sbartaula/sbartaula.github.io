@@ -15,8 +15,9 @@ permalink: /now/
     <li>Building Tenslam Vision</li>
     <li>Improving real-time motion intelligence systems</li>
     <li>Exploring computer vision for fitness, sports, and digital twins</li>
+    <li>Operating and improving a Slack-first AI workflow assistant for engineering teams</li>
     <li>Learning local LLMs and AI agent systems</li>
     <li>Writing technical notes from real experiments</li>
   </ul>
-  <p class="meta">Last updated: July 2026</p>
+  <p class="meta">Last updated: August 2026</p>
 </section>
