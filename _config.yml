@@ -1,5 +1,5 @@
-title: "Saroj — Motion Systems Lab"
-description: "Engineering notes, projects, and experiments across AI, computer vision, backend systems, and real-time AI."
+title: "Saroj | Applied AI and Product Engineer"
+description: "Applied AI, backend, and product engineering across LLM applications, AI systems, computer vision, and real-time software."
 url: "https://sbartaula.github.io"
 baseurl: ""
 lang: en
@@ -19,4 +19,5 @@ defaults:
 
 social:
   github: "https://github.com/sbartaula"
+  linkedin: "https://www.linkedin.com/in/man-on-mission/"
   email: "mailto:sarojbartaula152@gmail.com"

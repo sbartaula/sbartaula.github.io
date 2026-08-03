@@ -12,12 +12,11 @@ permalink: /now/
 <section class="panel">
   <p>Currently, I’m focused on:</p>
   <ul class="clean-list">
-    <li>Building Tenslam Vision</li>
-    <li>Improving real-time motion intelligence systems</li>
-    <li>Exploring computer vision for fitness, sports, and digital twins</li>
-    <li>Operating and improving a Slack-first AI workflow assistant for engineering teams</li>
-    <li>Learning local LLMs and AI agent systems</li>
-    <li>Writing technical notes from real experiments</li>
+    <li>Building applied AI product systems from idea to working prototype</li>
+    <li>Improving backend reliability for LLM and agent workflows</li>
+    <li>Operating a Slack-first AI assistant for engineering operations</li>
+    <li>Exploring real-time computer vision for product use cases</li>
+    <li>Writing technical notes from real implementation experiments</li>
   </ul>
   <p class="meta">Last updated: August 2026</p>
 </section>

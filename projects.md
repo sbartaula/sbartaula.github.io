@@ -1,28 +1,19 @@
 ---
 layout: default
-title: Projects
+title: Work
 permalink: /projects/
 ---
 
 <section class="page-header" id="projects-top">
-  <h1>Projects</h1>
-  <p>A selection of systems, prototypes, and experiments across AI, computer vision, and product engineering.</p>
+  <h1>Work</h1>
+  <p>Selected applied AI, backend, and product-engineering work with implementation detail and decision context.</p>
 </section>
 
 <section class="panel writing-callout">
-  <h2>How to read this page</h2>
+  <h2>How to read this work</h2>
   <p>
-    I prefer projects that sit between research and product: technically serious enough to be interesting,
-    but concrete enough to be useful. The most important thing here is not the polish level of each prototype;
-    it is the pattern of what I choose to build and how I turn ideas into working systems.
-  </p>
-  <p>
-    If you are hiring, look for three things here: whether I can turn ambiguous ideas into systems,
-    whether I can work across the stack when needed, and whether I choose technical problems that matter.
-  </p>
-  <p>
-    If you are evaluating this for investment, focus on evidence density: timeline, repeatability, measurable behavior,
-    and whether each prototype is moving toward reusable motion-intelligence infrastructure.
+    Each project is structured around problem, role, architecture decisions, and outcome signal.
+    The goal is to make engineering judgment and execution style easy to evaluate.
   </p>
 </section>
 
@@ -30,6 +21,7 @@ permalink: /projects/
   <h2>Jump to project</h2>
   <ul class="clean-list compact-list">
     <li><a href="#ai-agent-chat">AI Agent Chat - Slack-First Engineering Assistant</a></li>
+    <li><a href="#flowtrack">Flowtrack - Local-First AI Productivity</a></li>
     <li><a href="#tenslam-gym">Tenslam Gym</a></li>
     <li><a href="#tenslam-vision-motion-engine">Tenslam Vision Motion Engine</a></li>
     <li><a href="#local-llm-learning-lab">Local LLM Learning Lab</a></li>
@@ -79,19 +71,40 @@ permalink: /projects/
     <p class="project-nav"><a href="#projects-top">Back to top</a></p>
   </article>
 
+  <article class="panel project-card" id="flowtrack">
+    <h2>Flowtrack - Local-First AI Productivity</h2>
+    <p class="meta">Status: Active build</p>
+    <p>Built a local-first productivity tracker that uses AI-assisted dashboard behavior without requiring cloud account dependency.</p>
+    <h3>Role and ownership</h3>
+    <p>Owned product and engineering delivery across backend logic, AI integration points, and user workflow design.</p>
+    <h3>Problem</h3>
+    <p>Most productivity tools depend on cloud-heavy workflows even when users only need fast local control and privacy-first behavior.</p>
+    <h3>What I built</h3>
+    <p>A local-first tracker with AI-assisted dashboard interactions designed for low-friction daily use.</p>
+    <h3>What this shows</h3>
+    <ul class="clean-list compact-list signal-list">
+      <li>Product engineering beyond a single AI niche</li>
+      <li>Ability to design around privacy and practical user constraints</li>
+      <li>Execution from idea to usable product workflow</li>
+    </ul>
+    <h3>Tech stack</h3>
+    <p>Python, local storage patterns, AI integration workflows, product UI iteration</p>
+    <p class="project-nav"><a href="#projects-top">Back to top</a></p>
+  </article>
+
   <article class="panel project-card" id="tenslam-gym">
     <h2>Tenslam Gym</h2>
     <p class="meta">Status: Live / prototype / actively developed</p>
     <p>Real-time AI personal trainer Android app using pose estimation, posture correction, rep counting, Firebase, and computer vision.</p>
     <h3>Role and ownership</h3>
-    <p>Founder-led build with end-to-end ownership across CV logic, app behavior, and product loop.</p>
+    <p>End-to-end ownership across CV logic, app behavior, and product loop.</p>
     <h3>Timeline</h3>
     <p>Active build phase, iterating through production-minded prototypes.</p>
     <h3>Problem</h3>
     <p>Most fitness apps record activity, but do not help users understand movement quality while they are training.</p>
     <h3>What I built</h3>
     <p>An Android prototype that detects pose in real time, tracks reps, and gives feedback on posture and movement execution.</p>
-    <h3>Evidence and metrics to publish</h3>
+    <h3>Current evidence</h3>
     <ul class="clean-list compact-list signal-list">
       <li>Latency envelope for on-device feedback loop</li>
       <li>Rep-count reliability on selected movement classes</li>
@@ -106,7 +119,7 @@ permalink: /projects/
     <h3>Tech stack</h3>
     <p>Android, Kotlin/Java, MediaPipe, Firebase, Computer Vision, Pose Estimation</p>
     <h3>Public evidence</h3>
-    <p>Demo walkthrough and architecture brief available on request while private iteration is in progress.</p>
+    <p>Demo walkthrough and architecture brief available on request during private iteration.</p>
     <p class="project-nav"><a href="#projects-top">Back to top</a></p>
   </article>
 
@@ -115,14 +128,14 @@ permalink: /projects/
     <p class="meta">Status: In development</p>
     <p>A video-to-skeleton motion intelligence system for fitness, sports, digital twins, and physical AI.</p>
     <h3>Role and ownership</h3>
-    <p>Founder-led architecture and implementation across data representation and pipeline behavior.</p>
+    <p>Owned architecture and implementation across data representation and pipeline behavior.</p>
     <h3>Timeline</h3>
     <p>Core pipeline phase with ongoing representation and quality improvements.</p>
     <h3>Problem</h3>
     <p>Raw video is easy to store but hard to use in downstream systems that need structured motion data.</p>
     <h3>What I built</h3>
     <p>A pipeline that extracts human movement signals from video and turns them into structured motion features.</p>
-    <h3>Evidence and metrics to publish</h3>
+    <h3>Current evidence</h3>
     <ul class="clean-list compact-list signal-list">
       <li>Landmark stability under camera and lighting variation</li>
       <li>Feature extraction consistency across repeated clips</li>
@@ -136,8 +149,8 @@ permalink: /projects/
     </ul>
     <h3>Tech stack</h3>
     <p>Python, Computer Vision, Pose Estimation, OpenCV, AI, Digital Twins</p>
-    <h3>Public evidence</h3>
-    <p>Architecture notes and implementation walkthrough are being prepared for public release.</p>
+    <h3>Current signal</h3>
+    <p>Pipeline and representation quality are under active validation for wider release.</p>
     <p class="project-nav"><a href="#projects-top">Back to top</a></p>
   </article>
 
@@ -153,7 +166,7 @@ permalink: /projects/
     <p>I wanted to understand the practical limits of local inference and how model size, quantization, and memory constraints affect real usage.</p>
     <h3>What I built</h3>
     <p>Small-scale local inference and fine-tuning experiments on consumer hardware.</p>
-    <h3>Evidence and metrics to publish</h3>
+    <h3>Current evidence</h3>
     <ul class="clean-list compact-list signal-list">
       <li>Tokens-per-second across selected model sizes and quantization levels</li>
       <li>Memory and VRAM usage by configuration</li>
@@ -167,8 +180,8 @@ permalink: /projects/
     </ul>
     <h3>Tech stack</h3>
     <p>Python, PyTorch, Hugging Face Transformers, Linux, LoRA, Qwen</p>
-    <h3>Public evidence</h3>
-    <p>Selected notes are published in Writing, with benchmark summaries being added incrementally.</p>
+    <h3>Current signal</h3>
+    <p>Selected notes are published in Writing while benchmark summaries are still in progress.</p>
     <p class="project-nav"><a href="#projects-top">Back to top</a></p>
   </article>
 
@@ -184,7 +197,7 @@ permalink: /projects/
     <p>Many ideas need a fast path from backend logic to a usable product surface.</p>
     <h3>What I built</h3>
     <p>Product prototypes that combine Django APIs with a modern frontend and deployable infrastructure.</p>
-    <h3>Evidence and metrics to publish</h3>
+    <h3>Current evidence</h3>
     <ul class="clean-list compact-list signal-list">
       <li>MVP delivery time from idea to deployable build</li>
       <li>API surface and reliability checks used during iteration</li>
@@ -198,8 +211,8 @@ permalink: /projects/
     </ul>
     <h3>Tech stack</h3>
     <p>Python, Django REST Framework, Next.js, React, PostgreSQL, Firebase, Koyeb, Vercel</p>
-    <h3>Public evidence</h3>
-    <p>Selected technical breakdowns are being organized into publishable case studies.</p>
+    <h3>Current signal</h3>
+    <p>Selected implementation breakdowns are available and being consolidated into cleaner public case studies.</p>
     <p class="project-nav"><a href="#projects-top">Back to top</a></p>
   </article>
 
@@ -215,7 +228,7 @@ permalink: /projects/
     <p>AI systems need more than prompts; they need predictable, observable, and debuggable orchestration.</p>
     <h3>What I built</h3>
     <p>Workflow experiments focused on failure handling, telemetry, and operational clarity.</p>
-    <h3>Evidence and metrics to publish</h3>
+    <h3>Current evidence</h3>
     <ul class="clean-list compact-list signal-list">
       <li>Failure-mode taxonomy and retry behavior under common error classes</li>
       <li>Tracing and logging coverage for debugging and incident review</li>
@@ -229,8 +242,8 @@ permalink: /projects/
     </ul>
     <h3>Tech stack</h3>
     <p>Python, FastAPI, LangGraph-style workflows, logging, APIs, dashboards</p>
-    <h3>Public evidence</h3>
-    <p>Internal notes are being condensed into a public architecture and reliability brief.</p>
+    <h3>Current signal</h3>
+    <p>Internal reliability notes and architecture patterns are being condensed for public release.</p>
     <p class="project-nav"><a href="#projects-top">Back to top</a></p>
   </article>
 </section>

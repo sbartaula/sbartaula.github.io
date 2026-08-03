@@ -10,16 +10,16 @@ permalink: /about/
 
 <section class="panel prose">
   <p>
-    I am Saroj, based in Spain, and I build at the intersection of AI,
-    computer vision, backend systems, and product execution.
+    I am Saroj, based in Spain, and I build at the intersection of applied AI,
+    backend systems, and product execution.
   </p>
   <p>
-    I am especially interested in systems that connect the digital and physical world: human motion,
-    real-time feedback, digital twins, robotics interfaces, and practical physical AI.
+    I am especially interested in systems that turn model capability into product utility,
+    including LLM workflows, AI application backends, and real-time computer vision use cases.
   </p>
   <p>
-    This site exists to make my work auditable. Projects show implementation choices, writing shows reasoning,
-    and case studies show where systems fail and how they improve over time.
+    This site exists to make my work auditable. Work pages show implementation choices,
+    writing shows reasoning, and project notes show where systems fail and how they improve.
   </p>
 </section>
 
