@@ -1,9 +1,10 @@
 <footer class="site-footer">
-  <p>© Saroj</p>
+  <p>© {{ 'now' | date: '%Y' }} {{ site.author }}</p>
   <div class="footer-links">
+    <a href="{{ '/now/' | relative_url }}">Now</a>
     <a href="{{ '/resume/' | relative_url }}">Resume</a>
-    <a href="{{ site.social.github }}">GitHub</a>
-    <a href="{{ site.social.linkedin }}">LinkedIn</a>
+    <a href="{{ site.social.github }}" rel="me">GitHub</a>
+    <a href="{{ site.social.linkedin }}" rel="me">LinkedIn</a>
     <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
     <a href="{{ site.social.email }}">Email</a>
   </div>

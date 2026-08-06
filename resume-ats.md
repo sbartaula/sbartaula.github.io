@@ -2,6 +2,9 @@
 layout: default
 title: Resume ATS (Legacy)
 permalink: /resume-ats/
+canonical_url: /resume/
+robots: noindex, follow
+sitemap: false
 ---
 
 <section class="page-header">

@@ -3,21 +3,36 @@ layout: none
 ---
 <?xml version="1.0" encoding="UTF-8" ?>
 <feed xmlns="http://www.w3.org/2005/Atom">
+  {% assign latest_post = site.posts | first %}
+  {% assign feed_updated = latest_post.last_modified_at | default: latest_post.date | default: site.time %}
+  {% assign feed_updated_epoch = feed_updated | date: '%s' | plus: 0 %}
+  {% for candidate in site.posts limit:20 %}
+    {% assign candidate_updated = candidate.last_modified_at | default: candidate.date %}
+    {% assign candidate_updated_epoch = candidate_updated | date: '%s' | plus: 0 %}
+    {% if candidate_updated_epoch > feed_updated_epoch %}
+      {% assign feed_updated = candidate_updated %}
+      {% assign feed_updated_epoch = candidate_updated_epoch %}
+    {% endif %}
+  {% endfor %}
   <title>{{ site.title | xml_escape }}</title>
-  <link href="{{ site.url }}{{ site.baseurl }}/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="{{ site.url }}{{ site.baseurl }}/" rel="alternate" type="text/html" />
-  <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>{{ site.url }}{{ site.baseurl }}/</id>
+  <subtitle>{{ site.description | xml_escape }}</subtitle>
+  <link href="{{ '/feed.xml' | absolute_url | xml_escape }}" rel="self" type="application/atom+xml" />
+  <link href="{{ '/' | absolute_url | xml_escape }}" rel="alternate" type="text/html" />
+  <updated>{{ feed_updated | date_to_xmlschema }}</updated>
+  <id>{{ '/' | absolute_url | xml_escape }}</id>
   <author>
-    <name>Saroj</name>
+    <name>{{ site.author | xml_escape }}</name>
   </author>
 
   {% for post in site.posts limit:20 %}
+  {% assign post_updated = post.last_modified_at | default: post.date %}
   <entry>
     <title>{{ post.title | xml_escape }}</title>
-    <link href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" />
-    <updated>{{ post.date | date_to_xmlschema }}</updated>
-    <id>{{ site.url }}{{ site.baseurl }}{{ post.url }}</id>
+    <link href="{{ post.url | absolute_url | xml_escape }}" />
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ post_updated | date_to_xmlschema }}</updated>
+    <id>{{ post.url | absolute_url | xml_escape }}</id>
+    <summary>{{ post.excerpt | strip_html | strip_newlines | xml_escape }}</summary>
     <content type="html">{{ post.content | xml_escape }}</content>
   </entry>
   {% endfor %}

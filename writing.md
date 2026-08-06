@@ -2,6 +2,7 @@
 layout: default
 title: Writing
 permalink: /writing/
+description: "Technical writing on applied AI, LLM systems, computer vision, backend reliability, local models, and product engineering."
 ---
 
 <section class="page-header">
@@ -24,10 +25,9 @@ permalink: /writing/
   <div class="post-list">
     {% for post in site.posts %}
       <article class="post-item">
-        <p class="meta">{{ post.date | date: "%B %d, %Y" }} · {{ post.tags | join: ", " }}</p>
+        <p class="meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time> · {{ post.tags | join: ", " }}</p>
         <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
         <p>{{ post.excerpt | strip_html }}</p>
-        <a class="text-link" href="{{ post.url | relative_url }}">Read more</a>
       </article>
     {% endfor %}
   </div>

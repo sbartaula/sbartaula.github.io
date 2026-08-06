@@ -3,8 +3,13 @@ description: "Applied AI, backend, and product engineering across LLM applicatio
 url: "https://sbartaula.github.io"
 baseurl: ""
 lang: en
+og_locale: en_US
 author: "Saroj"
-default_og_image: "/assets/img/og-motion-systems.svg"
+default_og_image: "/assets/img/og-applied-ai.png"
+default_og_image_alt: "Saroj — Applied AI and Product Engineer building reliable AI-enabled products"
+default_og_image_type: "image/png"
+default_og_image_width: 1200
+default_og_image_height: 630
 
 markdown: kramdown
 permalink: /writing/:title/

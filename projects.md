@@ -2,6 +2,7 @@
 layout: default
 title: Work
 permalink: /projects/
+description: "Selected applied AI, backend, and product engineering work, with architecture decisions, constraints, guardrails, and outcome signals."
 ---
 
 <section class="page-header" id="projects-top">
@@ -34,7 +35,7 @@ permalink: /projects/
   <article class="panel project-card" id="ai-agent-chat">
     <h2>AI Agent Chat - Slack-First Engineering Assistant</h2>
     <p class="meta">Status: Deployed in private production environment</p>
-    <p>Designed and built a production-grade AI workflow assistant to streamline engineering operations inside Slack.</p>
+    <p>Designed and built an AI workflow assistant to streamline engineering operations inside Slack.</p>
     <h3>Role and ownership</h3>
     <p>Owned architecture and implementation end-to-end, from API design and workflow orchestration to deployment and security hardening.</p>
     <h3>Timeline</h3>
@@ -43,6 +44,15 @@ permalink: /projects/
     <p>Engineering teams often split context across chat, pull requests, CI logs, and ad hoc notes, which slows execution and creates visibility gaps.</p>
     <h3>What I built</h3>
     <p>A Slack-first assistant that captures ideas and tasks, opens GitHub draft PRs from Slack messages, monitors CI status, gates merges behind passing checks, summarizes failed checks with AI, and supports freeform GPT-4o conversations.</p>
+    <figure class="project-figure" id="ai-agent-architecture">
+      <a class="project-diagram-link" href="{{ '/assets/img/ai-agent-workflow.svg' | relative_url }}" aria-label="Open the AI Agent Chat architecture diagram at full size">
+        <picture>
+          <source media="(max-width: 720px)" srcset="{{ '/assets/img/ai-agent-workflow-mobile.svg' | relative_url }}" width="720" height="1120">
+          <img src="{{ '/assets/img/ai-agent-workflow.svg' | relative_url }}" width="1200" height="720" loading="lazy" decoding="async" alt="Architecture flow from Slack through webhook verification, deduplication, routing, guarded execution, GitHub, and GPT-4o summaries">
+        </picture>
+      </a>
+      <figcaption>Sanitized system architecture. Deterministic controls surround the model call; private deployment details are omitted. Select the diagram to open the desktop version at full size.</figcaption>
+    </figure>
     <h3>Security design</h3>
     <ul class="clean-list compact-list signal-list">
       <li>Verified all Slack and GitHub webhook endpoints with HMAC-SHA256 signatures</li>
@@ -66,8 +76,8 @@ permalink: /projects/
     </ul>
     <h3>Tech stack</h3>
     <p>Python 3.12, FastAPI, SQLite, GitHub REST API, Slack Events API, Slack Slash Commands, Slack Interactions API, OpenRouter (GPT-4o), Render</p>
-    <h3>Public evidence</h3>
-    <p>Production deployment is private, but architecture and implementation write-up can be shared in interview or portfolio walkthrough format.</p>
+    <h3>Public artifact</h3>
+    <p>The sanitized architecture above documents the system boundary and implemented guardrails described here; it is not independent production verification. The deployment remains private, and a deeper implementation walkthrough is available in an interview or portfolio review.</p>
     <p class="project-nav"><a href="#projects-top">Back to top</a></p>
   </article>
 

@@ -2,6 +2,8 @@
 layout: default
 title: Resume
 permalink: /resume/
+description: "Saroj's resume: applied AI, backend systems, LLM workflows, computer vision, and end-to-end product engineering experience."
+body_class: resume-page
 ---
 
 <section class="page-header">
@@ -11,7 +13,12 @@ permalink: /resume/
 
 <section class="panel prose">
   <h2>Saroj</h2>
-  <p>Spain · <a href="mailto:sarojbartaula152@gmail.com">sarojbartaula152@gmail.com</a> · <a href="https://github.com/sbartaula">GitHub</a> · <a href="https://www.linkedin.com/in/man-on-mission/">LinkedIn</a> · <a href="https://sbartaula.github.io">Website</a></p>
+  <p>Spain · <a href="{{ site.social.email }}">sarojbartaula152@gmail.com</a> · <a href="{{ site.social.github }}">github.com/sbartaula</a> · <a href="{{ site.social.linkedin }}">linkedin.com/in/man-on-mission</a> · <a href="{{ site.url }}{{ site.baseurl }}">sbartaula.github.io</a></p>
+
+  <div class="resume-actions">
+    <button class="button print-button" type="button" onclick="window.print()">Print or save as PDF</button>
+    <span class="meta">Optimized for a clean browser-to-PDF export.</span>
+  </div>
 
   <h3>Headline</h3>
   <p>Applied AI and Product Engineer</p>
@@ -74,5 +81,4 @@ permalink: /resume/
   <h3>Languages</h3>
   <p>English, Spanish, Nepali, Hindi, Basic German</p>
 
-  <p class="meta">Export tip: use browser Print to PDF for submission-ready format.</p>
 </section>

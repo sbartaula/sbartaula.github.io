@@ -1,0 +1,21 @@
+---
+layout: none
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for item in site.pages %}
+    {% if item.sitemap != false and item.url != '/feed.xml' and item.url != '/sitemap.xml' and item.url != '/robots.txt' %}
+  <url>
+    <loc>{{ item.url | absolute_url | xml_escape }}</loc>
+    {% if item.last_modified_at %}<lastmod>{{ item.last_modified_at | date_to_xmlschema }}</lastmod>{% endif %}
+  </url>
+    {% endif %}
+  {% endfor %}
+  {% for post in site.posts %}
+  <url>
+    <loc>{{ post.url | absolute_url | xml_escape }}</loc>
+    <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
+  </url>
+  {% endfor %}
+</urlset>

@@ -2,6 +2,7 @@
 layout: default
 title: Now
 permalink: /now/
+description: "Saroj's current applied AI, backend reliability, agent workflow, and computer vision build priorities."
 ---
 
 <section class="page-header">
@@ -18,5 +19,5 @@ permalink: /now/
     <li>Exploring real-time computer vision for product use cases</li>
     <li>Writing technical notes from real implementation experiments</li>
   </ul>
-  <p class="meta">Last updated: August 2026</p>
+  <p class="meta">Last updated: <time datetime="2026-08">August 2026</time></p>
 </section>

@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
-
 :root {
   --bg: #edf2f0;
   --text: #14211d;
@@ -45,6 +43,32 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: 999px;
+  background: var(--accent-strong);
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  transform: translateY(calc(-100% - 1rem));
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus {
+  color: white;
+  transform: translateY(0);
 }
 
 .site-shell {
@@ -102,21 +126,15 @@ a:hover {
   column-gap: 1.1rem;
 }
 
-.nav-primary,
-.nav-secondary {
+.nav-primary {
   display: flex;
   flex-wrap: wrap;
   gap: 0.72rem;
 }
 
-.nav-secondary {
-  padding-left: 0.9rem;
-  border-left: 1px solid rgba(79, 100, 93, 0.35);
-}
-
 .site-nav a,
 .footer-links a,
-.quick-links a {
+.quick-links a:not(.button) {
   color: var(--text);
   text-decoration: none;
   font-weight: 520;
@@ -126,14 +144,15 @@ a:hover {
   font-weight: 700;
 }
 
-.nav-secondary a {
-  font-size: 0.93rem;
-  color: var(--muted);
+.site-nav a[aria-current="page"] {
+  color: var(--accent-strong);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 .site-nav a:hover,
 .footer-links a:hover,
-.quick-links a:hover {
+.quick-links a:not(.button):hover {
   color: var(--accent);
 }
 
@@ -146,12 +165,8 @@ a:hover {
   margin-bottom: 1.75rem;
 }
 
-.intro-grid,
-.cv-grid,
-.cv-header,
 .hero-grid,
-.split-columns,
-.favorites-grid {
+.split-columns {
   display: grid;
   gap: 1.2rem;
 }
@@ -214,14 +229,14 @@ a:hover {
   gap: 0.65rem;
 }
 
-.quick-links a {
+.quick-links a:not(.button) {
   padding: 0.42rem 0.72rem;
   border: 1px solid rgba(15, 118, 110, 0.18);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.68);
 }
 
-.quick-links a:hover {
+.quick-links a:not(.button):hover {
   background: rgba(214, 236, 233, 0.55);
 }
 
@@ -251,8 +266,7 @@ a:hover {
 .post-item h2,
 .post-item h3,
 .project-card h2,
-.project-card h3,
-.cv-card h3 {
+.project-card h3 {
   margin: 0.25rem 0 0.35rem;
 }
 
@@ -268,9 +282,6 @@ a:hover {
   max-width: 72ch;
 }
 
-.intro-grid h2,
-.cv-card h3,
-.cv-header h2,
 .mini-card .meta,
 .section-link {
   margin-top: 0;
@@ -285,12 +296,6 @@ a:hover {
   margin: 0;
   font-family: var(--sans);
   line-height: 1.15;
-}
-
-.proof-panel {
-  background:
-    linear-gradient(180deg, rgba(15, 118, 110, 0.08), rgba(255, 255, 255, 0.9)),
-    rgba(255, 255, 255, 0.84);
 }
 
 .project-card h3 {
@@ -309,6 +314,11 @@ a:hover {
 .mini-card:first-child {
   border-top: 0;
   padding-top: 0;
+}
+
+.mini-card h3 {
+  margin: 0 0 0.35rem;
+  line-height: 1.25;
 }
 
 .home-project-grid {
@@ -342,9 +352,7 @@ a:hover {
   background: radial-gradient(circle, rgba(15, 118, 110, 0.2), transparent 70%);
 }
 
-.hero-note p,
-.supporting-copy,
-.favorite-note {
+.hero-note p {
   color: rgba(31, 27, 24, 0.82);
 }
 
@@ -353,9 +361,11 @@ a:hover {
   flex-wrap: wrap;
   gap: 0.45rem;
   margin-top: 0.75rem;
+  padding: 0;
+  list-style: none;
 }
 
-.signal-chips span {
+.signal-chips li {
   border: 1px solid rgba(15, 118, 110, 0.24);
   border-radius: 999px;
   padding: 0.24rem 0.58rem;
@@ -365,37 +375,6 @@ a:hover {
   color: var(--accent-strong);
   background: rgba(226, 243, 240, 0.62);
   font-weight: 700;
-}
-
-.hero-status {
-  margin-top: 0.9rem;
-  padding-top: 0.75rem;
-  border-top: 1px dashed rgba(79, 100, 93, 0.38);
-}
-
-.hero-status p {
-  margin: 0.2rem 0;
-  font-size: 0.92rem;
-}
-
-.stack-panel {
-  padding-top: 1.5rem;
-}
-
-.favorite-card {
-  padding: 1rem 1.1rem;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: rgba(249, 253, 252, 0.74);
-}
-
-.favorite-note {
-  margin-bottom: 0;
-}
-
-.cv-header p,
-.cv-contact p {
-  margin: 0.2rem 0;
 }
 
 .post-content > :first-child {
@@ -465,6 +444,35 @@ a:hover {
   font-weight: 700;
 }
 
+.project-figure {
+  margin: 1.25rem 0 1.5rem;
+  scroll-margin-top: 1rem;
+}
+
+.project-diagram-link,
+.project-figure picture,
+.project-figure img {
+  display: block;
+}
+
+.project-diagram-link {
+  border-radius: 14px;
+}
+
+.project-figure img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--soft);
+}
+
+.project-figure figcaption {
+  margin-top: 0.55rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
 .button,
 .text-link {
   display: inline-block;
@@ -478,15 +486,20 @@ a:hover {
   text-decoration: none;
   border: 1px solid rgba(9, 73, 67, 0.18);
   box-shadow: 0 8px 20px rgba(9, 73, 67, 0.24);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
 }
 
 .button:hover {
   background: linear-gradient(180deg, #0c6a63, #094944);
   color: white;
+  text-decoration: none;
 }
 
 table {
   width: 100%;
+  table-layout: auto;
   border-collapse: collapse;
   margin-top: 0.8rem;
   border: 1px solid var(--line);
@@ -497,8 +510,10 @@ table {
 th,
 td {
   text-align: left;
+  vertical-align: top;
   padding: 0.66rem 0.72rem;
   border-top: 1px solid var(--line);
+  overflow-wrap: anywhere;
 }
 
 thead th {
@@ -511,8 +526,16 @@ tbody tr:nth-child(even) {
   background: rgba(248, 252, 251, 0.78);
 }
 
-.cv-actions {
-  margin-top: 1.5rem;
+.resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1rem 0 1.4rem;
+}
+
+.resume-actions .meta {
+  margin: 0;
 }
 
 @media (min-width: 760px) {
@@ -521,20 +544,45 @@ tbody tr:nth-child(even) {
     gap: 1.6rem;
   }
 
-  .project-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .intro-grid,
-  .cv-grid,
-  .cv-header,
-  .split-columns,
-  .favorites-grid {
+  .split-columns {
     grid-template-columns: 1fr 1fr;
   }
 
   .home-project-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-project-grid .mini-card {
+    border-top: 0;
+    border-left: 1px solid var(--line);
+    padding: 0 0 0 1rem;
+  }
+
+  .home-project-grid .mini-card:first-child {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .home-project-grid .mini-card:nth-child(3) {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+    padding-top: 1rem;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 960px) {
+  .home-project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .home-project-grid .mini-card:nth-child(3) {
+    grid-column: auto;
+    border-top: 0;
+    border-left: 1px solid var(--line);
+    padding-top: 0;
+    padding-left: 1rem;
   }
 }
 
@@ -551,13 +599,110 @@ tbody tr:nth-child(even) {
     gap: 0.55rem;
   }
 
-  .nav-secondary {
-    padding-left: 0;
-    border-left: 0;
+  .site-nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
   }
 
   .hero h1 {
     max-width: none;
     font-size: clamp(1.95rem, 9vw, 2.6rem);
+  }
+
+  table {
+    font-size: 0.86rem;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm;
+  }
+
+  html,
+  body {
+    background: white;
+  }
+
+  .resume-page {
+    color: #000;
+    font-size: 10pt;
+    line-height: 1.35;
+  }
+
+  .resume-page .skip-link,
+  .resume-page .site-header,
+  .resume-page .site-footer,
+  .resume-page .page-header,
+  .resume-page .resume-actions {
+    display: none !important;
+  }
+
+  .resume-page .site-shell {
+    width: 100%;
+    margin: 0;
+  }
+
+  .resume-page .site-main {
+    padding: 0;
+  }
+
+  .resume-page .panel {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: white;
+    box-shadow: none;
+  }
+
+  .resume-page .prose h2 {
+    margin: 0 0 0.25rem;
+    font-size: 18pt;
+  }
+
+  .resume-page .prose h3 {
+    margin: 0.8rem 0 0.2rem;
+    font-size: 11pt;
+    break-after: avoid;
+  }
+
+  .resume-page .prose p {
+    margin: 0.2rem 0;
+  }
+
+  .resume-page .clean-list {
+    margin-top: 0.2rem;
+  }
+
+  .resume-page a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .resume-page li,
+  .resume-page p {
+    break-inside: avoid;
   }
 }

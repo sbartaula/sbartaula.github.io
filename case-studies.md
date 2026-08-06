@@ -2,6 +2,9 @@
 layout: default
 title: Case Studies (Merged)
 permalink: /case-studies/
+canonical_url: /projects/
+robots: noindex, follow
+sitemap: false
 ---
 
 <section class="page-header">

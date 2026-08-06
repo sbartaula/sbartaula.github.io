@@ -1,37 +1,75 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ site.lang | default: 'en' }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% assign page_title = page.title | default: site.title %}
-    {% assign page_description = page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 | xml_escape %}
-    {% assign page_url = page.url | replace:'index.html','' | absolute_url %}
+    {% if page.url == '/' %}
+      {% assign page_title = site.title %}
+    {% else %}
+      {% assign page_title = page.seo_title | default: page.title | default: site.title %}
+    {% endif %}
+    {% assign raw_page_description = page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 %}
+    {% assign page_description = raw_page_description | xml_escape %}
+    {% assign canonical_path = page.canonical_url | default: page.url | replace:'index.html','' %}
+    {% assign page_url = canonical_path | absolute_url %}
     {% assign page_og_image = page.og_image | default: site.default_og_image | absolute_url %}
-    <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    {% assign page_og_image_alt = page.og_image_alt | default: site.default_og_image_alt | default: page_title %}
+    {% assign site_home_url = '/' | absolute_url %}
+    <title>{% if page.url == '/' %}{{ site.title | escape }}{% elsif page.title %}{{ page.title | escape }} · {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
     <meta name="description" content="{{ page_description }}">
+    <meta name="author" content="{{ site.author | escape }}">
+    <meta name="theme-color" content="#edf2f0">
+    {% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
     <link rel="canonical" href="{{ page_url }}">
 
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+    <meta property="og:locale" content="{{ site.og_locale | default: 'en_US' }}">
     <meta property="og:title" content="{{ page_title | escape }}">
     <meta property="og:description" content="{{ page_description }}">
     <meta property="og:url" content="{{ page_url }}">
     <meta property="og:site_name" content="{{ site.title | escape }}">
     <meta property="og:image" content="{{ page_og_image }}">
-    <meta property="og:image:alt" content="{{ page_title | escape }}">
+    <meta property="og:image:type" content="{{ page.og_image_type | default: site.default_og_image_type }}">
+    <meta property="og:image:width" content="{{ page.og_image_width | default: site.default_og_image_width }}">
+    <meta property="og:image:height" content="{{ page.og_image_height | default: site.default_og_image_height }}">
+    <meta property="og:image:alt" content="{{ page_og_image_alt | escape }}">
+    {% if page.layout == 'post' %}
+      <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+      {% for tag in page.tags %}<meta property="article:tag" content="{{ tag | escape }}">{% endfor %}
+    {% endif %}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ page_title | escape }}">
     <meta name="twitter:description" content="{{ page_description }}">
     <meta name="twitter:image" content="{{ page_og_image }}">
+    <meta name="twitter:image:alt" content="{{ page_og_image_alt | escape }}">
 
     <script type="application/ld+json">
+      {% if page.layout == 'post' %}
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": {{ page.title | jsonify }},
+        "description": {{ raw_page_description | jsonify }},
+        "url": {{ page_url | jsonify }},
+        "mainEntityOfPage": {{ page_url | jsonify }},
+        "image": {{ page_og_image | jsonify }},
+        "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+        "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+        "author": {
+          "@type": "Person",
+          "name": {{ site.author | default: 'Saroj' | jsonify }},
+          "url": {{ site_home_url | jsonify }}
+        }
+      }
+      {% else %}
       {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "{{ site.author | default: 'Saroj' | escape }}",
-        "url": "{{ site.url }}",
+        "name": {{ site.author | default: 'Saroj' | jsonify }},
+        "url": {{ site_home_url | jsonify }},
         "sameAs": [
-          "{{ site.social.github }}",
-          "{{ site.social.linkedin }}"
+          {{ site.social.github | jsonify }},
+          {{ site.social.linkedin | jsonify }}
         ],
         "jobTitle": "Applied AI and Product Engineer",
         "knowsAbout": [
@@ -43,15 +81,21 @@
           "Computer Vision"
         ]
       }
+      {% endif %}
     </script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
   </head>
-  <body>
+  <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-shell">
       {% include header.html %}
-      <main class="site-main">
+      <main class="site-main" id="main-content" tabindex="-1">
         {{ content }}
       </main>
       {% include footer.html %}

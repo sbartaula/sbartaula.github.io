@@ -2,6 +2,7 @@
 layout: default
 title: About
 permalink: /about/
+description: "About Saroj, an applied AI and product engineer building reliable LLM workflows, backend systems, and real-time computer vision products."
 ---
 
 <section class="page-header">
@@ -22,4 +23,3 @@ permalink: /about/
     writing shows reasoning, and project notes show where systems fail and how they improve.
   </p>
 </section>
-

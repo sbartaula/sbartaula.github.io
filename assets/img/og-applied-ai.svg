@@ -1,0 +1,70 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description">
+  <title id="title">Saroj, Applied AI and Product Engineer</title>
+  <desc id="description">Social preview card for Saroj's portfolio, focused on applied AI, backend systems, and product engineering.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="70" y1="20" x2="1135" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#123F39"/>
+      <stop offset="0.56" stop-color="#0B2F2B"/>
+      <stop offset="1" stop-color="#071F1D"/>
+    </linearGradient>
+    <linearGradient id="card" x1="777" y1="111" x2="1102" y2="519" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DDF4EF"/>
+      <stop offset="1" stop-color="#A8D8CF"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#000" flood-opacity="0.22"/>
+    </filter>
+    <style>
+      .sans { font-family: Inter, "Segoe UI", Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#background)"/>
+  <g opacity="0.09" stroke="#BDE5DF">
+    <path d="M0 105H1200M0 210H1200M0 315H1200M0 420H1200M0 525H1200"/>
+    <path d="M100 0V630M200 0V630M300 0V630M400 0V630M500 0V630M600 0V630M700 0V630M800 0V630M900 0V630M1000 0V630M1100 0V630"/>
+  </g>
+  <circle cx="1116" cy="80" r="230" fill="#0F766E" fill-opacity="0.18"/>
+  <circle cx="1017" cy="539" r="280" fill="#2A7E75" fill-opacity="0.10"/>
+
+  <text x="72" y="82" class="sans" fill="#8FE0D4" font-size="22" font-weight="700" letter-spacing="3">APPLIED AI · BACKEND SYSTEMS · PRODUCT ENGINEERING</text>
+  <text x="72" y="184" class="sans" fill="white" font-size="70" font-weight="800" letter-spacing="-2">Saroj</text>
+  <text x="72" y="254" class="sans" fill="#E7F6F3" font-size="37" font-weight="600">Building AI-enabled products</text>
+  <text x="72" y="302" class="sans" fill="#E7F6F3" font-size="37" font-weight="600">from idea to working system.</text>
+
+  <g class="sans" font-size="19" font-weight="600">
+    <rect x="72" y="368" width="126" height="42" rx="21" fill="#D6ECE9" fill-opacity="0.12" stroke="#71B9AF"/>
+    <text x="95" y="395" fill="#DDF4EF">LLM apps</text>
+    <rect x="214" y="368" width="150" height="42" rx="21" fill="#D6ECE9" fill-opacity="0.12" stroke="#71B9AF"/>
+    <text x="238" y="395" fill="#DDF4EF">AI workflows</text>
+    <rect x="380" y="368" width="174" height="42" rx="21" fill="#D6ECE9" fill-opacity="0.12" stroke="#71B9AF"/>
+    <text x="405" y="395" fill="#DDF4EF">Computer vision</text>
+  </g>
+
+  <text x="72" y="534" class="sans" fill="#9FC3BC" font-size="20">sbartaula.github.io</text>
+
+  <g filter="url(#shadow)">
+    <rect x="735" y="100" width="397" height="430" rx="32" fill="url(#card)"/>
+    <rect x="772" y="140" width="323" height="72" rx="18" fill="#F8FBFA"/>
+    <circle cx="807" cy="176" r="10" fill="#0F766E"/>
+    <text x="832" y="169" class="sans" fill="#4F645D" font-size="14" font-weight="700" letter-spacing="2">AMBIGUOUS IDEA</text>
+    <text x="832" y="191" class="sans" fill="#14211D" font-size="18" font-weight="600">Define the useful loop</text>
+
+    <path d="M934 221V252" stroke="#0F766E" stroke-width="3" stroke-linecap="round"/>
+    <path d="M925 244L934 253L943 244" stroke="#0F766E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="772" y="261" width="323" height="108" rx="18" fill="#0F766E"/>
+    <text x="807" y="296" class="sans" fill="#BDE5DF" font-size="14" font-weight="700" letter-spacing="2">ENGINEERED SYSTEM</text>
+    <text x="807" y="326" class="sans" fill="white" font-size="19" font-weight="700">Model + backend + guardrails</text>
+    <text x="807" y="351" class="sans" fill="#DDF4EF" font-size="16">Measure failure, reliability, utility</text>
+
+    <path d="M934 378V409" stroke="#0F766E" stroke-width="3" stroke-linecap="round"/>
+    <path d="M925 401L934 410L943 401" stroke="#0F766E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="772" y="418" width="323" height="72" rx="18" fill="#F8FBFA"/>
+    <circle cx="807" cy="454" r="10" fill="#0F766E"/>
+    <text x="832" y="447" class="sans" fill="#4F645D" font-size="14" font-weight="700" letter-spacing="2">WORKING PRODUCT</text>
+    <text x="832" y="469" class="sans" fill="#14211D" font-size="18" font-weight="600">Ship, evaluate, improve</text>
+  </g>
+</svg>

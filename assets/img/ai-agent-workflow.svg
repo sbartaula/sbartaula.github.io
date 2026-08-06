@@ -1,0 +1,110 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description">
+  <title id="title">AI Agent Chat guarded workflow architecture</title>
+  <desc id="description">Slack events pass through signature verification, replay protection, deduplication, deterministic routing, guarded execution, GitHub actions, and bounded GPT-4o summaries.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFA"/>
+      <stop offset="1" stop-color="#E7F1EE"/>
+    </linearGradient>
+    <linearGradient id="control" x1="324" y1="183" x2="617" y2="503" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F766E"/>
+      <stop offset="1" stop-color="#0B4F4A"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0B312C" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M1 1L10 6L1 11" stroke="#55736B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      .label { font: 700 16px Inter, "Segoe UI", Arial, sans-serif; letter-spacing: 2px; }
+      .heading { font: 700 24px Inter, "Segoe UI", Arial, sans-serif; }
+      .body { font: 500 17px Inter, "Segoe UI", Arial, sans-serif; }
+      .small { font: 600 14px Inter, "Segoe UI", Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" rx="28" fill="url(#background)"/>
+  <path d="M0 132H1200" stroke="#C9D9D4"/>
+  <text x="56" y="59" class="label" fill="#0F766E">AI AGENT CHAT</text>
+  <text x="56" y="98" class="heading" fill="#14211D">Guarded workflow architecture</text>
+  <text x="1144" y="81" class="body" fill="#4F645D" text-anchor="end">Deterministic controls around a bounded model call</text>
+
+  <g fill="#4F645D" class="label">
+    <text x="54" y="168">INGRESS</text>
+    <text x="329" y="168">CONTROL PLANE</text>
+    <text x="675" y="168">EXECUTION</text>
+    <text x="982" y="168">INTEGRATIONS</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="54" y="202" width="214" height="250" rx="20" fill="white" stroke="#C9D9D4"/>
+    <circle cx="107" cy="259" r="26" fill="#D6ECE9"/>
+    <path d="M97 250H117M97 259H112M97 268H108" stroke="#0F766E" stroke-width="3" stroke-linecap="round"/>
+    <text x="92" y="317" class="heading" fill="#14211D">Slack</text>
+    <text x="92" y="350" class="body" fill="#4F645D">Events</text>
+    <text x="92" y="378" class="body" fill="#4F645D">Commands</text>
+    <text x="92" y="406" class="body" fill="#4F645D">Interactions</text>
+  </g>
+
+  <path d="M269 326H314" stroke="#55736B" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="324" y="202" width="293" height="250" rx="20" fill="url(#control)"/>
+    <text x="358" y="250" class="small" fill="#BDE5DF">TRUST BOUNDARY</text>
+    <rect x="356" y="274" width="229" height="45" rx="10" fill="white" fill-opacity="0.12"/>
+    <circle cx="380" cy="296" r="6" fill="#8FE0D4"/>
+    <text x="398" y="302" class="body" fill="white">HMAC verification</text>
+    <rect x="356" y="329" width="229" height="45" rx="10" fill="white" fill-opacity="0.12"/>
+    <circle cx="380" cy="351" r="6" fill="#8FE0D4"/>
+    <text x="398" y="357" class="body" fill="white">Replay protection</text>
+    <rect x="356" y="384" width="229" height="45" rx="10" fill="white" fill-opacity="0.12"/>
+    <circle cx="380" cy="406" r="6" fill="#8FE0D4"/>
+    <text x="398" y="412" class="body" fill="white">Event deduplication</text>
+  </g>
+
+  <path d="M618 326H660" stroke="#55736B" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="670" y="202" width="250" height="250" rx="20" fill="white" stroke="#C9D9D4"/>
+    <text x="702" y="250" class="small" fill="#0F766E">DETERMINISTIC ROUTER</text>
+    <rect x="702" y="274" width="186" height="43" rx="10" fill="#EDF6F4"/>
+    <text x="722" y="301" class="body" fill="#14211D">PR intake</text>
+    <rect x="702" y="328" width="186" height="43" rx="10" fill="#EDF6F4"/>
+    <text x="722" y="355" class="body" fill="#14211D">CI monitor</text>
+    <rect x="702" y="382" width="186" height="43" rx="10" fill="#E4E8F5"/>
+    <text x="722" y="409" class="body" fill="#303A61">Freeform chat</text>
+  </g>
+
+  <path d="M921 278H961" stroke="#55736B" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M921 390H961" stroke="#55736B" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="970" y="202" width="176" height="116" rx="18" fill="white" stroke="#C9D9D4"/>
+    <text x="994" y="244" class="small" fill="#0F766E">GITHUB API</text>
+    <text x="994" y="275" class="body" fill="#14211D">Draft PRs</text>
+    <text x="994" y="300" class="body" fill="#14211D">CI and merges</text>
+
+    <rect x="970" y="338" width="176" height="114" rx="18" fill="#303A61"/>
+    <text x="994" y="380" class="small" fill="#C9D4FF">OPENROUTER</text>
+    <text x="994" y="411" class="body" fill="white">GPT-4o chat</text>
+    <text x="994" y="436" class="body" fill="white">Check summaries</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="54" y="504" width="1092" height="154" rx="20" fill="#14211D"/>
+    <text x="86" y="543" class="label" fill="#8FE0D4">OPERATIONAL GUARDRAILS</text>
+    <line x1="413" y1="532" x2="413" y2="629" stroke="#36524B"/>
+    <line x1="777" y1="532" x2="777" y2="629" stroke="#36524B"/>
+
+    <text x="86" y="581" class="small" fill="#AFC0BB">EXECUTION MODES</text>
+    <text x="86" y="613" class="body" fill="white">intake_only → simulate → apply</text>
+
+    <text x="445" y="581" class="small" fill="#AFC0BB">MERGE POLICY</text>
+    <text x="445" y="613" class="body" fill="white">Passing checks required</text>
+
+    <text x="809" y="581" class="small" fill="#AFC0BB">COST CONTROL</text>
+    <text x="809" y="613" class="body" fill="white">Per-task LLM spend cap</text>
+  </g>
+</svg>

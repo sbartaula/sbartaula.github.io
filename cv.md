@@ -2,6 +2,9 @@
 layout: default
 title: CV (Legacy)
 permalink: /cv/
+canonical_url: /resume/
+robots: noindex, follow
+sitemap: false
 ---
 
 <section class="page-header">

@@ -6,15 +6,14 @@
     </a>
   </div>
 
+  {% assign current_url = page.url | replace: 'index.html', '' %}
   <nav class="site-nav" aria-label="Main navigation">
     <div class="nav-primary">
-      <a href="{{ '/projects/' | relative_url }}">Work</a>
+      <a href="{{ '/projects/' | relative_url }}"{% if current_url == '/projects/' %} aria-current="page"{% endif %}>Work</a>
       <a href="{{ '/#experience' | relative_url }}">Experience</a>
-      <a href="{{ '/writing/' | relative_url }}">Writing</a>
-      <a href="{{ '/about/' | relative_url }}">About</a>
-      <a href="{{ '/resume/' | relative_url }}">Resume</a>
-      <a href="{{ site.social.github }}">GitHub</a>
-      <a href="{{ site.social.linkedin }}">LinkedIn</a>
+      <a href="{{ '/writing/' | relative_url }}"{% if current_url contains '/writing/' %} aria-current="page"{% endif %}>Writing</a>
+      <a href="{{ '/about/' | relative_url }}"{% if current_url == '/about/' %} aria-current="page"{% endif %}>About</a>
+      <a href="{{ '/resume/' | relative_url }}"{% if current_url == '/resume/' %} aria-current="page"{% endif %}>Resume</a>
     </div>
   </nav>
 </header>

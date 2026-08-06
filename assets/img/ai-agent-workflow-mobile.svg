@@ -1,0 +1,89 @@
+<svg width="720" height="1120" viewBox="0 0 720 1120" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description">
+  <title id="title">AI Agent Chat mobile workflow architecture</title>
+  <desc id="description">A mobile-friendly vertical view of Slack ingress, security controls, deterministic routing, GitHub and GPT-4o integrations, and operational guardrails.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="720" y2="1120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFA"/>
+      <stop offset="1" stop-color="#E7F1EE"/>
+    </linearGradient>
+    <linearGradient id="control" x1="60" y1="300" x2="660" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F766E"/>
+      <stop offset="1" stop-color="#0B4F4A"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0B312C" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M1 1L10 6L1 11" stroke="#55736B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      .label { font: 700 20px Inter, "Segoe UI", Arial, sans-serif; letter-spacing: 2px; }
+      .heading { font: 700 30px Inter, "Segoe UI", Arial, sans-serif; }
+      .body { font: 500 24px Inter, "Segoe UI", Arial, sans-serif; }
+      .small { font: 700 18px Inter, "Segoe UI", Arial, sans-serif; letter-spacing: 1px; }
+    </style>
+  </defs>
+
+  <rect width="720" height="1120" rx="28" fill="url(#background)"/>
+  <text x="42" y="52" class="label" fill="#0F766E">AI AGENT CHAT</text>
+  <text x="42" y="94" class="heading" fill="#14211D">Guarded workflow architecture</text>
+  <path d="M0 122H720" stroke="#C9D9D4"/>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="150" width="600" height="104" rx="18" fill="white" stroke="#C9D9D4"/>
+    <circle cx="109" cy="202" r="25" fill="#D6ECE9"/>
+    <path d="M99 194H119M99 202H114M99 210H110" stroke="#0F766E" stroke-width="3" stroke-linecap="round"/>
+    <text x="151" y="195" class="small" fill="#0F766E">INGRESS</text>
+    <text x="151" y="228" class="body" fill="#14211D">Slack events · commands · interactions</text>
+  </g>
+
+  <path d="M360 255V288" stroke="#55736B" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="300" width="600" height="224" rx="20" fill="url(#control)"/>
+    <text x="92" y="341" class="small" fill="#BDE5DF">CONTROL PLANE · TRUST BOUNDARY</text>
+    <rect x="92" y="362" width="536" height="44" rx="10" fill="white" fill-opacity="0.12"/>
+    <circle cx="119" cy="384" r="6" fill="#8FE0D4"/>
+    <text x="141" y="392" class="body" fill="white">HMAC verification</text>
+    <rect x="92" y="416" width="536" height="44" rx="10" fill="white" fill-opacity="0.12"/>
+    <circle cx="119" cy="438" r="6" fill="#8FE0D4"/>
+    <text x="141" y="446" class="body" fill="white">Replay protection</text>
+    <rect x="92" y="470" width="536" height="34" rx="10" fill="white" fill-opacity="0.12"/>
+    <circle cx="119" cy="487" r="6" fill="#8FE0D4"/>
+    <text x="141" y="495" class="body" fill="white">Event deduplication</text>
+  </g>
+
+  <path d="M360 525V557" stroke="#55736B" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="569" width="600" height="210" rx="20" fill="white" stroke="#C9D9D4"/>
+    <text x="92" y="611" class="small" fill="#0F766E">DETERMINISTIC ROUTER</text>
+    <rect x="92" y="631" width="536" height="40" rx="10" fill="#EDF6F4"/>
+    <text x="116" y="659" class="body" fill="#14211D">PR intake</text>
+    <rect x="92" y="680" width="536" height="40" rx="10" fill="#EDF6F4"/>
+    <text x="116" y="708" class="body" fill="#14211D">CI monitor and merge gate</text>
+    <rect x="92" y="729" width="536" height="34" rx="10" fill="#E4E8F5"/>
+    <text x="116" y="755" class="body" fill="#303A61">Freeform chat and check summaries</text>
+  </g>
+
+  <path d="M360 780V810" stroke="#55736B" stroke-width="2.5"/>
+  <path d="M360 810H202V831" stroke="#55736B" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M360 810H518V831" stroke="#55736B" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="843" width="284" height="104" rx="18" fill="white" stroke="#C9D9D4"/>
+    <text x="88" y="884" class="small" fill="#0F766E">GITHUB API</text>
+    <text x="88" y="921" class="body" fill="#14211D">Draft PRs · CI · merges</text>
+
+    <rect x="376" y="843" width="284" height="104" rx="18" fill="#303A61"/>
+    <text x="404" y="884" class="small" fill="#C9D4FF">OPENROUTER</text>
+    <text x="404" y="921" class="body" fill="white">GPT-4o · bounded calls</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="978" width="600" height="106" rx="20" fill="#14211D"/>
+    <text x="90" y="1018" class="small" fill="#8FE0D4">OPERATIONAL GUARDRAILS</text>
+    <text x="90" y="1057" class="body" fill="white">Modes · passing checks · per-task spend cap</text>
+  </g>
+</svg>
