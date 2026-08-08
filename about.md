@@ -11,9 +11,12 @@ description: "About Saroj, an applied AI and product engineer building reliable 
 
 <section class="panel prose">
   <p>
-    I am Saroj, based in Spain, and I build at the intersection of applied AI,
+    I’m Saroj, based in Spain, and I build at the intersection of applied AI,
     backend systems, and product execution.
   </p>
+  <blockquote>
+    <strong>2026 update:</strong> I wrote this in 2024, and I’m keeping the original post largely unchanged because it captures that stage of the journey honestly. The tennis product described there did not become a sustainable business. In 2025 I started Tenslam Vision and began approaching the problem differently, including building Tenslam Gym and experimenting with broader motion-intelligence systems.
+  </blockquote>
   <p>
     I am especially interested in systems that turn model capability into product utility,
     including LLM workflows, AI application backends, and real-time computer vision use cases.

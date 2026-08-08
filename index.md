@@ -10,13 +10,11 @@ description: "Saroj builds applied AI products, reliable backend systems, LLM wo
       <p class="eyebrow">Applied AI · Backend Systems · Product Engineering</p>
       <h1>I build AI-enabled products from ambiguous idea to working system.</h1>
       <p class="lede">
-        I am Saroj, an engineer based in Spain working across applied AI, backend systems, and product development.
-        I build with Python, FastAPI/Django, LLM and agent workflows, ML integrations, real-time applications,
-        and modern web/mobile stacks.
+        I’m Saroj, an engineer based in Spain working across applied AI, backend systems, and product development.
+        I build with Python, FastAPI/Django, LLM and agent workflows, ML integrations, and modern web/mobile technologies.
       </p>
       <p class="lede">
-        My focus is simple: turn emerging AI capability into useful products that real users can run,
-        evaluate, and trust.
+        My focus is simple: turn new technical capability into products people can actually use, evaluate, and trust.
       </p>
 
       <nav class="quick-links" aria-label="Primary links">
@@ -72,7 +70,21 @@ description: "Saroj builds applied AI products, reliable backend systems, LLM wo
       <p>Android-based AI trainer with pose estimation, posture feedback, and rep counting for everyday workouts.</p>
       <a class="text-link" href="{{ '/projects/#tenslam-gym' | relative_url }}">See project</a>
     </article>
+    <article class="mini-card">
+      <p class="meta">Motion intelligence</p>
+      <h3>Motion Intelligence Experiments</h3>
+      <p>Ongoing work on converting video into structured human-movement information for products and systems.</p>
+      <a class="text-link" href="{{ '/projects/#tenslam-vision-motion-engine' | relative_url }}">See project</a>
+    </article>
   </div>
+</section>
+
+<section class="panel">
+  <div class="section-heading">
+    <p class="eyebrow">Archive</p>
+    <h2>Ask my archive</h2>
+  </div>
+  <p>Ask about my writing, public projects, or background. Answers are generated from information published on this site and may be incomplete. Sources and dates are shown where available.</p>
 </section>
 
 <section class="panel" id="experience">
@@ -82,14 +94,16 @@ description: "Saroj builds applied AI products, reliable backend systems, LLM wo
   </div>
   <div class="split-columns">
     <div>
-      <p><strong>2026-Present · Tenslam Vision</strong><br>Founder and Applied AI Engineer</p>
-      <p><strong>2022-2024 · Tenslam</strong><br>ML Engineer</p>
-      <p><strong>2022-2023 · TheHeCapp</strong><br>AI Engineer</p>
+      <p><strong>2025–Present · Tenslam Vision</strong><br>Founder & Applied AI / Product Engineer</p>
+      <p><strong>2023–2025 · Tenslam</strong><br>Co-Founder & ML / Product Developer</p>
+      <p><strong>2022–2023 · Box99 / TheHeCapp</strong><br>AI / Product Contributor</p>
+      <p><strong>2022 · Demium</strong><br>Entrepreneur in Residence</p>
     </div>
     <div>
-      <p><strong>2022 · Greentech Barcelona</strong><br>Data Science and Web Development</p>
-      <p><strong>2018-2020 · Eventti</strong><br>Junior Backend Developer</p>
-      <p class="meta">See full role detail and tools in the resume page.</p>
+      <p><strong>2020–2022 · Independent Web & Data Projects</strong><br>Self-employed / Independent · Spain</p>
+      <p><strong>2018–2020 · Eventti.net</strong><br>Backend Development Contributor</p>
+      <p><strong>2013–2016 · Sky Infosys</strong><br>Computer Technician</p>
+      <p class="meta">See the full role detail and tools on the resume page.</p>
     </div>
   </div>
 </section>

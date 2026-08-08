@@ -33,29 +33,34 @@ body_class: resume-page
   </p>
 
   <h3>Experience</h3>
-  <p><strong>Founder and Applied AI Engineer, Tenslam Vision</strong> · Spain · 2026-Present</p>
+  <p><strong>Founder & Applied AI / Product Engineer, Tenslam Vision</strong> · Spain · 2025-Present</p>
   <ul class="clean-list">
     <li>Built AI product prototypes across motion analysis, real-time feedback loops, and backend service workflows.</li>
     <li>Owned problem definition, architecture, implementation, and iteration cycles.</li>
     <li>Designed systems for practical reliability under device, latency, and data-quality constraints.</li>
   </ul>
 
-  <p><strong>ML Engineer, Tenslam</strong> · 2022-2024</p>
+  <p><strong>Co-Founder & ML / Product Developer, Tenslam</strong> · 2023-2025</p>
   <ul class="clean-list">
     <li>Worked on model integration and experimentation paths for product-facing ML behavior.</li>
   </ul>
 
-  <p><strong>AI Engineer, TheHeCapp</strong> · 2022-2023</p>
+  <p><strong>AI / Product Contributor, Box99 / TheHeCapp</strong> · 2022-2023</p>
   <ul class="clean-list">
     <li>Developed AI-assisted application workflows and integration-ready backend components.</li>
   </ul>
 
-  <p><strong>Data Science and Web Development, Greentech Barcelona</strong> · 2022</p>
+  <p><strong>Entrepreneur in Residence, Demium</strong> · 2022</p>
   <ul class="clean-list">
-    <li>Contributed to data-driven workflows and web product development tasks.</li>
+    <li>Supported venture-building work through product and early-stage execution.</li>
   </ul>
 
-  <p><strong>Junior Backend Developer, Eventti</strong> · 2018-2020</p>
+  <p><strong>Independent Web & Data Projects</strong> · Self-employed / Independent · Spain · 2020-2022</p>
+  <ul class="clean-list">
+    <li>Built small websites and digital setups for local businesses while developing practical backend, data, and ML skills through hands-on work.</li>
+  </ul>
+
+  <p><strong>Backend Development Contributor, Eventti</strong> · 2018-2020</p>
   <ul class="clean-list">
     <li>Built backend logic and foundational API/system development skills in production-style workflows.</li>
   </ul>
