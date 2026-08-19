@@ -11,7 +11,7 @@ description: "About Saroj, an applied AI and product engineer building reliable 
 
 <section class="panel prose">
   <p>
-    I’m Saroj, based in Spain, and I build at the intersection of applied AI,
+    I’m Saroj Bartaula, based in Spain, and I build at the intersection of applied AI,
     backend systems, and product execution.
   </p>
   <blockquote>

@@ -1,12 +1,12 @@
-title: "Saroj | Applied AI and Product Engineer"
+title: "Saroj Bartaula | Applied AI and Product Engineer"
 description: "Applied AI, backend, and product engineering across LLM applications, AI systems, computer vision, and real-time software."
 url: "https://sbartaula.github.io"
 baseurl: ""
 lang: en
 og_locale: en_US
-author: "Saroj"
+author: "Saroj Bartaula"
 default_og_image: "/assets/img/og-applied-ai.png"
-default_og_image_alt: "Saroj — Applied AI and Product Engineer building reliable AI-enabled products"
+default_og_image_alt: "Saroj Bartaula — Applied AI and Product Engineer building reliable AI-enabled products"
 default_og_image_type: "image/png"
 default_og_image_width: 1200
 default_og_image_height: 630
@@ -26,3 +26,13 @@ social:
   github: "https://github.com/sbartaula"
   linkedin: "https://www.linkedin.com/in/man-on-mission/"
   email: "mailto:sarojbartaula152@gmail.com"
+  website: "https://sarojbartaula.com/"
+
+projects:
+  blog_assistant: "https://sarojbartaula.com/"
+  flowtrack: "https://github.com/sbartaula/Flowtrack"
+  tenslam_gym: "https://www.tenslam.com/"
+  tenslam_vision: "https://www.tenslamvision.com/"
+
+recognition:
+  alia_2026: "https://digital.gob.es/content/dam/portal-mtdfp/comunicacion_sedia/2026/2026-03-04/260304NPDesaf%C3%ADoALIATalentArena.pdf"

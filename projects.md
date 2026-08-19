@@ -2,258 +2,260 @@
 layout: default
 title: Work
 permalink: /projects/
-description: "Selected applied AI, backend, and product engineering work, with architecture decisions, constraints, guardrails, and outcome signals."
+description: "Selected LLM, computer vision, backend, and product engineering work with direct links to public products and source code."
 ---
 
 <section class="page-header" id="projects-top">
   <h1>Work</h1>
-  <p>Selected applied AI, backend, and product-engineering work with implementation detail and decision context.</p>
+  <p>Selected applied AI and product-engineering work, led by projects that can be opened, tested, or inspected.</p>
 </section>
 
-<section class="panel writing-callout">
-  <h2>How to read this work</h2>
+<section class="panel work-intro">
+  <p class="eyebrow">A note on evidence</p>
+  <h2>Public work first. Private work labeled.</h2>
   <p>
-    Each project is structured around problem, role, architecture decisions, and outcome signal.
-    The goal is to make engineering judgment and execution style easy to evaluate.
+    Live products and source code are linked directly. For private systems, I show the problem,
+    implemented controls, and a sanitized architecture without presenting internal claims as independent proof.
   </p>
 </section>
 
-<section class="panel">
-  <h2>Jump to project</h2>
-  <ul class="clean-list compact-list">
-    <li><a href="#ai-agent-chat">AI Agent Chat - Slack-First Engineering Assistant</a></li>
-    <li><a href="#flowtrack">Flowtrack - Local-First AI Productivity</a></li>
+<nav class="panel project-index" aria-label="Jump to a project">
+  <h2>Featured projects</h2>
+  <ol>
+    <li><a href="#personal-blog-ai-assistant">SaroAI — Site-Grounded Blog Assistant</a></li>
+    <li><a href="#flowtrack">Flowtrack</a></li>
     <li><a href="#tenslam-gym">Tenslam Gym</a></li>
     <li><a href="#tenslam-vision-motion-engine">Tenslam Vision Motion Engine</a></li>
-    <li><a href="#local-llm-learning-lab">Local LLM Learning Lab</a></li>
-    <li><a href="#django-nextjs-product-systems">Django + Next.js Product Systems</a></li>
-    <li><a href="#ai-research-platform-experiments">AI Research Platform Experiments</a></li>
-  </ul>
-</section>
+    <li><a href="#ai-agent-chat">AI Agent Chat</a></li>
+  </ol>
+  <a class="text-link" href="#engineering-explorations">Additional engineering explorations</a>
+</nav>
 
-<section class="project-grid">
-  <article class="panel project-card" id="ai-agent-chat">
-    <h2>AI Agent Chat - Slack-First Engineering Assistant</h2>
-    <p class="meta">Status: Deployed in private production environment</p>
-    <p>Designed and built an AI workflow assistant to streamline engineering operations inside Slack.</p>
-    <h3>Role and ownership</h3>
-    <p>Owned architecture and implementation end-to-end, from API design and workflow orchestration to deployment and security hardening.</p>
-    <h3>Timeline</h3>
-    <p>Built from scratch and promoted through staged execution modes from intake-only behavior to active workflow automation.</p>
+<section class="project-grid" aria-label="Featured project case studies">
+  <article class="panel project-card project-card-featured" id="personal-blog-ai-assistant">
+    <div class="project-card-header">
+      <div>
+        <p class="meta">Featured personal project · Live</p>
+        <h2>SaroAI — Site-Grounded Blog Assistant</h2>
+      </div>
+      <a class="button button-compact" href="{{ site.projects.blog_assistant }}">Try SaroAI</a>
+    </div>
+    <p class="project-lede">
+      An LLM-powered Q&amp;A layer for my personal blog that lets visitors ask across published articles and receive concise, context-grounded answers.
+    </p>
+
     <h3>Problem</h3>
-    <p>Engineering teams often split context across chat, pull requests, CI logs, and ad hoc notes, which slows execution and creates visibility gaps.</p>
+    <p>A growing archive is difficult to explore one post at a time, especially when a visitor arrives with a specific question rather than a title or keyword.</p>
+
     <h3>What I built</h3>
-    <p>A Slack-first assistant that captures ideas and tasks, opens GitHub draft PRs from Slack messages, monitors CI status, gates merges behind passing checks, summarizes failed checks with AI, and supports freeform GPT-4o conversations.</p>
-    <figure class="project-figure" id="ai-agent-architecture">
-      <a class="project-diagram-link" href="{{ '/assets/img/ai-agent-workflow.svg' | relative_url }}" aria-label="Open the AI Agent Chat architecture diagram at full size">
-        <picture>
-          <source media="(max-width: 720px)" srcset="{{ '/assets/img/ai-agent-workflow-mobile.svg' | relative_url }}" width="720" height="1120">
-          <img src="{{ '/assets/img/ai-agent-workflow.svg' | relative_url }}" width="1200" height="720" loading="lazy" decoding="async" alt="Architecture flow from Slack through webhook verification, deduplication, routing, guarded execution, GitHub, and GPT-4o summaries">
-        </picture>
-      </a>
-      <figcaption>Sanitized system architecture. Deterministic controls surround the model call; private deployment details are omitted. Select the diagram to open the desktop version at full size.</figcaption>
-    </figure>
-    <h3>Security design</h3>
+    <p>
+      I implemented a site-grounded AI chat experience on sarojbartaula.com that answers questions across my published archive and background.
+      It turns a static reading experience into an interactive way to discover relevant ideas and source context.
+    </p>
+
+    <h3>Product decisions</h3>
     <ul class="clean-list compact-list signal-list">
-      <li>Verified all Slack and GitHub webhook endpoints with HMAC-SHA256 signatures</li>
-      <li>Blocked replay attacks with a strict 5-minute timestamp validation window</li>
-      <li>Disabled API documentation routes in production deployments</li>
-      <li>Applied prompt-injection hardening so user input cannot override system instructions</li>
-      <li>Enforced per-task LLM spend caps to prevent runaway cost events</li>
+      <li>Grounded the experience in my public writing and background instead of presenting it as a general-purpose chatbot</li>
+      <li>Used conversational questions to reduce the effort of searching across an archive</li>
+      <li>Deployed the feature on the live personal site so reviewers can evaluate the product experience directly</li>
     </ul>
-    <h3>Key engineering decisions</h3>
-    <ul class="clean-list compact-list signal-list">
-      <li>Event deduplication cache prevents duplicate responses from Slack retry behavior</li>
-      <li>Two-layer routing separates deterministic command workflows from freeform LLM chat</li>
-      <li>Execution-worker budget guardrail halts runs before exceeding cost thresholds</li>
-      <li>Execution modes (intake_only, simulate, apply) support safe progression from observer to active editor</li>
-    </ul>
+
     <h3>What this shows</h3>
-    <ul class="clean-list compact-list signal-list">
-      <li>Production-minded AI workflow engineering with strong operational controls</li>
-      <li>Ability to integrate LLMs into deterministic software systems without losing reliability</li>
-      <li>Applied security and cost governance in real deployment conditions</li>
-    </ul>
-    <h3>Tech stack</h3>
-    <p>Python 3.12, FastAPI, SQLite, GitHub REST API, Slack Events API, Slack Slash Commands, Slack Interactions API, OpenRouter (GPT-4o), Render</p>
-    <h3>Public artifact</h3>
-    <p>The sanitized architecture above documents the system boundary and implemented guardrails described here; it is not independent production verification. The deployment remains private, and a deeper implementation walkthrough is available in an interview or portfolio review.</p>
+    <p>Hands-on LLM product integration, conversational interface design, and the ability to add a useful AI layer to an existing web product.</p>
+
+    <h3>Technical scope</h3>
+    <p>RAG, LLM integration, content retrieval and grounding, conversational UI, web product engineering</p>
+
+    <div class="project-proof">
+      <span>Public artifact</span>
+      <a href="{{ site.projects.blog_assistant }}">sarojbartaula.com</a>
+    </div>
     <p class="project-nav"><a href="#projects-top">Back to top</a></p>
   </article>
 
   <article class="panel project-card" id="flowtrack">
-    <h2>Flowtrack - Local-First AI Productivity</h2>
-    <p class="meta">Status: Active build</p>
-    <p>Built a local-first productivity tracker that uses AI-assisted dashboard behavior without requiring cloud account dependency.</p>
-    <h3>Role and ownership</h3>
-    <p>Owned product and engineering delivery across backend logic, AI integration points, and user workflow design.</p>
+    <div class="project-card-header">
+      <div>
+        <p class="meta">Open source · Active build</p>
+        <h2>Flowtrack</h2>
+      </div>
+      <a class="button button-compact" href="{{ site.projects.flowtrack }}">View source on GitHub</a>
+    </div>
+    <p class="project-lede">A local-first activity tracker with a browser dashboard and AI-assisted analysis, designed around user control rather than mandatory cloud accounts.</p>
+
     <h3>Problem</h3>
-    <p>Most productivity tools depend on cloud-heavy workflows even when users only need fast local control and privacy-first behavior.</p>
+    <p>Many productivity tools require users to send detailed activity data to a hosted service, even when a local workflow would be faster and more private.</p>
+
     <h3>What I built</h3>
-    <p>A local-first tracker with AI-assisted dashboard interactions designed for low-friction daily use.</p>
-    <h3>What this shows</h3>
     <ul class="clean-list compact-list signal-list">
-      <li>Product engineering beyond a single AI niche</li>
-      <li>Ability to design around privacy and practical user constraints</li>
-      <li>Execution from idea to usable product workflow</li>
+      <li>A background tracker for active windows, timestamps, context switches, and optional screenshots</li>
+      <li>A localhost browser dashboard for live logs, screenshot review, storage controls, AI analysis, and chat</li>
+      <li>Support for local Ollama models plus opt-in hosted providers and explicit backup workflows</li>
     </ul>
+
+    <h3>Key engineering decisions</h3>
+    <ul class="clean-list compact-list signal-list">
+      <li>Binds the dashboard to <code>127.0.0.1</code> so it is not exposed to the network by default</li>
+      <li>Keeps activity data on the user's machine unless the user explicitly invokes an external provider or backup</li>
+      <li>Applies screenshot retention and storage limits so passive capture does not grow without control</li>
+    </ul>
+
+    <h3>What this shows</h3>
+    <p>End-to-end product delivery across background services, local data handling, AI integrations, and a usable browser interface.</p>
+
     <h3>Tech stack</h3>
-    <p>Python, local storage patterns, AI integration workflows, product UI iteration</p>
+    <p>Python, browser dashboard, JSONL, systemd, local and hosted LLM integrations</p>
+
+    <div class="project-proof">
+      <span>Source code</span>
+      <a href="{{ site.projects.flowtrack }}">github.com/sbartaula/Flowtrack</a>
+    </div>
     <p class="project-nav"><a href="#projects-top">Back to top</a></p>
   </article>
 
   <article class="panel project-card" id="tenslam-gym">
-    <h2>Tenslam Gym</h2>
-    <p class="meta">Status: Live / prototype / actively developed</p>
-    <p>Real-time AI personal trainer Android app using pose estimation, posture correction, rep counting, Firebase, and computer vision.</p>
+    <div class="project-card-header">
+      <div>
+        <p class="meta">Live on Android · Actively developed</p>
+        <h2>Tenslam Gym</h2>
+      </div>
+      <a class="button button-compact" href="{{ site.projects.tenslam_gym }}">Visit live product</a>
+    </div>
+    <p class="project-lede">An Android AI trainer that uses real-time pose analysis for rep tracking and movement feedback during gym and home workouts.</p>
+
     <h3>Role and ownership</h3>
-    <p>End-to-end ownership across CV logic, app behavior, and product loop.</p>
-    <h3>Timeline</h3>
-    <p>Active build phase, iterating through production-minded prototypes.</p>
+    <p>I own the computer-vision logic, app behavior, product loop, and ongoing technical iteration.</p>
+
     <h3>Problem</h3>
-    <p>Most fitness apps record activity, but do not help users understand movement quality while they are training.</p>
+    <p>Most fitness apps record what a user did after a session but cannot respond to movement quality while the user is training.</p>
+
     <h3>What I built</h3>
-    <p>An Android prototype that detects pose in real time, tracks reps, and gives feedback on posture and movement execution.</p>
-    <h3>Current evidence</h3>
+    <p>An Android product that detects body pose in real time, follows exercise state, counts repetitions, and delivers feedback within the workout flow.</p>
+
+    <h3>Engineering constraints</h3>
     <ul class="clean-list compact-list signal-list">
-      <li>Latency envelope for on-device feedback loop</li>
-      <li>Rep-count reliability on selected movement classes</li>
-      <li>Failure conditions: occlusion, camera angle, and tempo changes</li>
+      <li>Maintaining stable feedback when joints are occluded or the camera angle changes</li>
+      <li>Separating valid repetitions from noisy or incomplete pose transitions</li>
+      <li>Keeping the camera-to-feedback loop useful under mobile-device constraints</li>
     </ul>
-    <h3>What this shows</h3>
-    <ul class="clean-list compact-list signal-list">
-      <li>Applied computer vision in a user-facing product</li>
-      <li>Real-time feedback loops under mobile constraints</li>
-      <li>Bridging model output to useful product behavior</li>
-    </ul>
+
     <h3>Tech stack</h3>
-    <p>Android, Kotlin/Java, MediaPipe, Firebase, Computer Vision, Pose Estimation</p>
-    <h3>Public evidence</h3>
-    <p>Demo walkthrough and architecture brief available on request during private iteration.</p>
+    <p>Android, Kotlin/Java, MediaPipe, Firebase, computer vision, pose estimation</p>
+
+    <p><strong>Current product signal:</strong> 20+ users and 5,000+ exercise reps processed (internal product telemetry).</p>
+
+    <div class="project-proof">
+      <span>Public product</span>
+      <a href="{{ site.projects.tenslam_gym }}">tenslam.com</a>
+    </div>
     <p class="project-nav"><a href="#projects-top">Back to top</a></p>
   </article>
 
   <article class="panel project-card" id="tenslam-vision-motion-engine">
-    <h2>Tenslam Vision Motion Engine</h2>
-    <p class="meta">Status: In development</p>
-    <p>A video-to-skeleton motion intelligence system for fitness, sports, digital twins, and physical AI.</p>
-    <h3>Role and ownership</h3>
-    <p>Owned architecture and implementation across data representation and pipeline behavior.</p>
-    <h3>Timeline</h3>
-    <p>Core pipeline phase with ongoing representation and quality improvements.</p>
+    <div class="project-card-header">
+      <div>
+        <p class="meta">Public product site · Engine in active development</p>
+        <h2>Tenslam Vision Motion Engine</h2>
+      </div>
+      <a class="button button-compact" href="{{ site.projects.tenslam_vision }}">Visit Tenslam Vision</a>
+    </div>
+    <p class="project-lede">A video-to-skeleton motion-intelligence pipeline for turning human movement into structured information for sports, fitness, and physical-AI workflows.</p>
+
     <h3>Problem</h3>
-    <p>Raw video is easy to store but hard to use in downstream systems that need structured motion data.</p>
+    <p>Raw video is rich in visual information but difficult for downstream products to query, compare, and use as structured motion data.</p>
+
     <h3>What I built</h3>
-    <p>A pipeline that extracts human movement signals from video and turns them into structured motion features.</p>
-    <h3>Current evidence</h3>
+    <p>A pipeline that extracts human movement signals from video and transforms them into structured skeletal and motion features.</p>
+
+    <h3>Engineering focus</h3>
     <ul class="clean-list compact-list signal-list">
-      <li>Landmark stability under camera and lighting variation</li>
-      <li>Feature extraction consistency across repeated clips</li>
-      <li>Downstream usability for analytics and feedback products</li>
+      <li>Improving landmark stability under camera, lighting, and movement variation</li>
+      <li>Normalizing motion representations so repeated clips can be compared consistently</li>
+      <li>Designing outputs that can support analytics, feedback products, and later physical-AI use cases</li>
     </ul>
-    <h3>What this shows</h3>
-    <ul class="clean-list compact-list signal-list">
-      <li>Designing structure from noisy real-world video input</li>
-      <li>Thinking beyond demos toward reusable motion infrastructure</li>
-      <li>Connecting vision pipelines to downstream product use cases</li>
-    </ul>
+
     <h3>Tech stack</h3>
-    <p>Python, Computer Vision, Pose Estimation, OpenCV, AI, Digital Twins</p>
-    <h3>Current signal</h3>
-    <p>Pipeline and representation quality are under active validation for wider release.</p>
+    <p>Python, OpenCV, pose estimation, skeletal representations, motion analysis</p>
+
+    <div class="project-proof">
+      <span>Public product site</span>
+      <a href="{{ site.projects.tenslam_vision }}">tenslamvision.com</a>
+    </div>
     <p class="project-nav"><a href="#projects-top">Back to top</a></p>
   </article>
 
-  <article class="panel project-card" id="local-llm-learning-lab">
-    <h2>Local LLM Learning Lab</h2>
-    <p class="meta">Status: Learning / experiments</p>
-    <p>Experiments running and fine-tuning small open-source language models locally on Ubuntu with limited hardware.</p>
-    <h3>Role and ownership</h3>
-    <p>Independently designed and executed local inference experiments under constrained hardware.</p>
-    <h3>Timeline</h3>
-    <p>Ongoing applied research cycle focused on practical deployment tradeoffs.</p>
-    <h3>Problem</h3>
-    <p>I wanted to understand the practical limits of local inference and how model size, quantization, and memory constraints affect real usage.</p>
-    <h3>What I built</h3>
-    <p>Small-scale local inference and fine-tuning experiments on consumer hardware.</p>
-    <h3>Current evidence</h3>
-    <ul class="clean-list compact-list signal-list">
-      <li>Tokens-per-second across selected model sizes and quantization levels</li>
-      <li>Memory and VRAM usage by configuration</li>
-      <li>Usability thresholds for local-first product workflows</li>
-    </ul>
-    <h3>What this shows</h3>
-    <ul class="clean-list compact-list signal-list">
-      <li>Curiosity grounded in hardware and system constraints</li>
-      <li>Hands-on understanding of quantization, memory, and inference tradeoffs</li>
-      <li>Practical evaluation instead of abstract model hype</li>
-    </ul>
-    <h3>Tech stack</h3>
-    <p>Python, PyTorch, Hugging Face Transformers, Linux, LoRA, Qwen</p>
-    <h3>Current signal</h3>
-    <p>Selected notes are published in Writing while benchmark summaries are still in progress.</p>
-    <p class="project-nav"><a href="#projects-top">Back to top</a></p>
-  </article>
+  <article class="panel project-card" id="ai-agent-chat">
+    <div class="project-card-header">
+      <div>
+        <p class="meta">Private deployment · Sanitized architecture available</p>
+        <h2>AI Agent Chat</h2>
+      </div>
+      <a class="button button-secondary button-compact" href="{{ '/assets/img/ai-agent-workflow.svg' | relative_url }}">Open architecture</a>
+    </div>
+    <p class="project-lede">A Slack-first engineering assistant for task intake, GitHub pull-request workflows, CI monitoring, failure summaries, and guarded automation.</p>
 
-  <article class="panel project-card" id="django-nextjs-product-systems">
-    <h2>Django + Next.js Product Systems</h2>
-    <p class="meta">Status: Multiple prototypes</p>
-    <p>Full-stack product experiments with REST APIs, authentication, dashboards, wallets, and MVP deployment.</p>
     <h3>Role and ownership</h3>
-    <p>Owned backend API design, frontend integration, deployment path, and delivery scope.</p>
-    <h3>Timeline</h3>
-    <p>Multiple build cycles across different product hypotheses.</p>
-    <h3>Problem</h3>
-    <p>Many ideas need a fast path from backend logic to a usable product surface.</p>
-    <h3>What I built</h3>
-    <p>Product prototypes that combine Django APIs with a modern frontend and deployable infrastructure.</p>
-    <h3>Current evidence</h3>
-    <ul class="clean-list compact-list signal-list">
-      <li>MVP delivery time from idea to deployable build</li>
-      <li>API surface and reliability checks used during iteration</li>
-      <li>Feature-to-feedback loop speed in prototype cycles</li>
-    </ul>
-    <h3>What this shows</h3>
-    <ul class="clean-list compact-list signal-list">
-      <li>Ability to move from backend logic to usable product surfaces</li>
-      <li>End-to-end ownership across APIs, frontend, and deployment</li>
-      <li>Bias toward shipping MVPs instead of isolated code exercises</li>
-    </ul>
-    <h3>Tech stack</h3>
-    <p>Python, Django REST Framework, Next.js, React, PostgreSQL, Firebase, Koyeb, Vercel</p>
-    <h3>Current signal</h3>
-    <p>Selected implementation breakdowns are available and being consolidated into cleaner public case studies.</p>
-    <p class="project-nav"><a href="#projects-top">Back to top</a></p>
-  </article>
+    <p>I owned the architecture and implementation end to end, from API design and workflow orchestration to deployment and security hardening.</p>
 
-  <article class="panel project-card" id="ai-research-platform-experiments">
-    <h2>AI Research Platform Experiments</h2>
-    <p class="meta">Status: Research / product engineering experiments</p>
-    <p>Experiments around AI agent workflows, observability, token control, structured logging, API governance, retries, and reliability.</p>
-    <h3>Role and ownership</h3>
-    <p>Designed and implemented workflow orchestration experiments with reliability as a first-class goal.</p>
-    <h3>Timeline</h3>
-    <p>Iterative platform experimentation aligned to practical AI product operations.</p>
-    <h3>Problem</h3>
-    <p>AI systems need more than prompts; they need predictable, observable, and debuggable orchestration.</p>
     <h3>What I built</h3>
-    <p>Workflow experiments focused on failure handling, telemetry, and operational clarity.</p>
-    <h3>Current evidence</h3>
+    <p>A Slack assistant that captures ideas and tasks, opens GitHub draft pull requests, monitors CI, gates merges behind passing checks, summarizes failures with an LLM, and supports freeform conversations.</p>
+
+    <figure class="project-figure" id="ai-agent-architecture">
+      <a class="project-diagram-link" href="{{ '/assets/img/ai-agent-workflow.svg' | relative_url }}" aria-label="Open the AI Agent Chat architecture diagram at full size">
+        <picture>
+          <source media="(max-width: 720px)" srcset="{{ '/assets/img/ai-agent-workflow-mobile.svg' | relative_url }}" width="720" height="1120">
+          <img src="{{ '/assets/img/ai-agent-workflow.svg' | relative_url }}" width="1200" height="720" loading="lazy" decoding="async" alt="Architecture flow from Slack through webhook verification, deduplication, routing, guarded execution, GitHub, and LLM summaries">
+        </picture>
+      </a>
+      <figcaption>Sanitized system architecture. Deterministic controls surround the model call; private deployment details are omitted.</figcaption>
+    </figure>
+
+    <h3>Security and reliability controls</h3>
     <ul class="clean-list compact-list signal-list">
-      <li>Failure-mode taxonomy and retry behavior under common error classes</li>
-      <li>Tracing and logging coverage for debugging and incident review</li>
-      <li>Token and cost control patterns for repeatable operations</li>
+      <li>HMAC-SHA256 verification on Slack and GitHub webhook endpoints</li>
+      <li>Timestamp validation and event deduplication to limit replay and retry behavior</li>
+      <li>Separate deterministic command routing from freeform LLM conversations</li>
+      <li>Staged execution modes and per-task spend limits for controlled automation</li>
     </ul>
-    <h3>What this shows</h3>
-    <ul class="clean-list compact-list signal-list">
-      <li>Systems thinking around reliability, observability, and control</li>
-      <li>Interest in the engineering layer around AI, not just model calls</li>
-      <li>Comfort working on product-facing infrastructure problems</li>
-    </ul>
+
     <h3>Tech stack</h3>
-    <p>Python, FastAPI, LangGraph-style workflows, logging, APIs, dashboards</p>
-    <h3>Current signal</h3>
-    <p>Internal reliability notes and architecture patterns are being condensed for public release.</p>
+    <p>Python 3.12, FastAPI, SQLite, GitHub REST API, Slack APIs, OpenRouter, GPT-4o, Render</p>
+
+    <div class="project-proof project-proof-private">
+      <span>Evidence boundary</span>
+      <p>The deployment is private. The sanitized architecture is the public artifact; a deeper implementation walkthrough is available during an interview.</p>
+    </div>
     <p class="project-nav"><a href="#projects-top">Back to top</a></p>
   </article>
+</section>
+
+<section class="panel explorations" id="engineering-explorations" aria-labelledby="explorations-title">
+  <div class="section-heading">
+    <p class="eyebrow">Additional work</p>
+    <h2 id="explorations-title">Engineering explorations</h2>
+    <p>Smaller experiments that show technical range without presenting them as finished public products.</p>
+  </div>
+
+  <div class="exploration-grid">
+    <article id="model-training-and-adaptation">
+      <h3>Model Training &amp; Adaptation</h3>
+      <p>Built and trained a 423K-parameter TinyGPT from scratch on custom text for 3,000 CPU steps, covering tokenization, context windows, Transformer blocks, training, evaluation, and generation. Also tested Hugging Face Qwen and PEFT/LoRA adaptation workflows.</p>
+      <p class="meta">Python · PyTorch · Hugging Face · PEFT/LoRA · Qwen · Linux</p>
+      <a class="text-link" href="{{ '/writing/running-small-llms-locally/' | relative_url }}">Read the field notes</a>
+    </article>
+
+    <article id="django-nextjs-product-systems">
+      <h3>Django + Next.js Product Systems</h3>
+      <p>Full-stack prototypes spanning REST APIs, authentication, dashboards, frontend integration, and MVP deployment.</p>
+      <p class="meta">Python · Django REST Framework · Next.js · React · PostgreSQL</p>
+    </article>
+
+    <article id="ai-research-platform-experiments">
+      <h3>AI Research Platform Experiments</h3>
+      <p>Workflow-orchestration experiments centered on retries, structured logging, observability, token control, and predictable failure handling.</p>
+      <p class="meta">Python · FastAPI · workflow graphs · logging · APIs</p>
+    </article>
+  </div>
+
+  <p class="project-nav"><a href="#projects-top">Back to top</a></p>
 </section>
