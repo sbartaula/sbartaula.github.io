@@ -31,6 +31,7 @@ social:
 projects:
   blog_assistant: "https://sarojbartaula.com/"
   flowtrack: "https://github.com/sbartaula/Flowtrack"
+  tenslam_minilm: "https://github.com/sbartaula/Minillm-pretrain"
   tenslam_gym: "https://www.tenslam.com/"
   tenslam_vision: "https://www.tenslamvision.com/"
 

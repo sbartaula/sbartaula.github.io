@@ -23,6 +23,7 @@ description: "Selected LLM, computer vision, backend, and product engineering wo
   <h2>Featured projects</h2>
   <ol>
     <li><a href="#personal-blog-ai-assistant">SaroAI — Site-Grounded Blog Assistant</a></li>
+    <li><a href="#tenslam-minilm">Tenslam MiniLM</a></li>
     <li><a href="#flowtrack">Flowtrack</a></li>
     <li><a href="#tenslam-gym">Tenslam Gym</a></li>
     <li><a href="#tenslam-vision-motion-engine">Tenslam Vision Motion Engine</a></li>
@@ -69,6 +70,40 @@ description: "Selected LLM, computer vision, backend, and product engineering wo
     <div class="project-proof">
       <span>Public artifact</span>
       <a href="{{ site.projects.blog_assistant }}">sarojbartaula.com</a>
+    </div>
+    <p class="project-nav"><a href="#projects-top">Back to top</a></p>
+  </article>
+
+  <article class="panel project-card" id="tenslam-minilm">
+    <div class="project-card-header">
+      <div>
+        <p class="meta">Open source · Completed training study</p>
+        <h2>Tenslam MiniLM</h2>
+      </div>
+      <a class="button button-compact" href="{{ site.projects.tenslam_minilm }}">View source on GitHub</a>
+    </div>
+    <p class="project-lede">An end-to-end language-model engineering project covering model architecture, data preparation, GPU training, evaluation, checkpointing, export, and local inference.</p>
+
+    <h3>What I built</h3>
+    <p>I implemented two decoder-only Transformers from random initialization in PyTorch. The larger model has 60.1 million parameters and processed 791 million training tokens from a six-source corpus.</p>
+
+    <h3>Engineering scope</h3>
+    <ul class="clean-list compact-list signal-list">
+      <li>Implemented RMSNorm, rotary position embeddings, causal attention, SwiGLU, and tied embeddings</li>
+      <li>Built a reproducible mixed-corpus pipeline with revision pinning, deduplication, overlap checks, and byte-level BPE tokenization</li>
+      <li>Added GPU training, atomic checkpoints, source-aware validation, export recovery, and CPU inference</li>
+      <li>Diagnosed a validation-sampling bug that made a partial TinyStories score appear to represent the full corpus</li>
+    </ul>
+
+    <h3>Evidence boundary</h3>
+    <p>The source code is public. The Stage 2 weights remain private while data redistribution terms are reviewed, and the capped run stopped at 791 million rather than the planned one billion processed tokens.</p>
+
+    <h3>Tech stack</h3>
+    <p>Python, PyTorch, CUDA, byte-level BPE, safetensors, memory-mapped datasets</p>
+
+    <div class="project-proof">
+      <span>Public artifacts</span>
+      <p><a href="{{ site.projects.tenslam_minilm }}">Source code</a> · <a href="{{ '/writing/building-tenslam-minilm/' | relative_url }}">Engineering write-up</a></p>
     </div>
     <p class="project-nav"><a href="#projects-top">Back to top</a></p>
   </article>
