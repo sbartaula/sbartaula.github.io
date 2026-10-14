@@ -5,12 +5,13 @@ date: 2026-10-14
 tags: [LLMs, PyTorch, Model Training, AI Engineering]
 excerpt: "An engineering write-up on training two decoder-only Transformers, recovering an inference export, and fixing misleading validation."
 hero_image: /assets/img/late-night-language-model-lab.png
-hero_image_alt: "Late-night language model development workspace"
+hero_image_alt: "A laptop showing language-model training charts in a late-night development workspace"
 og_image: /assets/img/late-night-language-model-lab.png
-og_image_alt: "Late-night language model development workspace"
+og_image_alt: "A laptop showing language-model training charts in a late-night development workspace"
+og_image_type: image/png
+og_image_width: 1672
+og_image_height: 941
 ---
-
-An engineering write-up on implementing two decoder-only Transformers from random initialization, preparing a mixed corpus, measuring GPU training, recovering an inference export, and fixing misleading validation.
 
 I wanted a language-model project small enough that I could understand the entire path from raw text to generated tokens, but serious enough to encounter the problems that show up in real training systems.
 

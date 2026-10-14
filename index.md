@@ -74,6 +74,15 @@ description: "Saroj builds applied AI products, reliable backend systems, LLM wo
 
   <div class="project-grid home-project-grid">
     <article class="mini-card">
+      <p class="meta">Language model engineering</p>
+      <h3>Tenslam MiniLM</h3>
+      <p>Two decoder-only Transformers trained from scratch, with a reproducible data pipeline, GPU training, evaluation, checkpointing, and CPU inference.</p>
+      <div class="project-links">
+        <a class="text-link" href="{{ '/projects/#tenslam-minilm' | relative_url }}">See project</a>
+        <a class="text-link" href="{{ '/writing/building-tenslam-minilm/' | relative_url }}">Read the training write-up</a>
+      </div>
+    </article>
+    <article class="mini-card">
       <p class="meta">AI workflow engineering</p>
       <h3>AI Agent Chat</h3>
       <p>Slack-first engineering assistant for PR intake, CI monitoring, merge gating, and GPT-4o powered check summaries.</p>
